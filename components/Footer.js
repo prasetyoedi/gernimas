@@ -7,16 +7,16 @@ const Footer = () => {
             <div className="container mx-auto px-6 lg:px-16">
                 <div className="flex flex-col lg:flex-row items-center lg:items-start">
                     <img className="w-14 h-18 mb-4 lg:mb-0 lg:mr-4" src="/assets/images/logo.png" alt="Logo" />
-                    <div className="text-red-400 text-2xl font-bold font-['Poppins'] mt-6">GERNIMAS</div>
+                    <div className="text-red-400 text-2xl font-bold mt-6">GERNIMAS</div>
                 </div>
-                <div className="mt-6 text-red-400 text-xs font-bold font-['Poppins'] leading-tight md:w-1/4">
+                <div className="mt-6 text-red-400 text-xs font-bold leading-tight md:w-1/4">
                     <span>GERNIMAS untuk meningkatkan aksesibilitas informasi kesehatan ibu dan anak. Bersama Wujudkan Generasi Emas Sebagai Langkah Cerdas Ibu Hamil.</span>
                 </div>
                 <div className="border-t border-red-400 my-6"></div>
                 <div className="flex flex-col lg:flex-row justify-between items-center">
                     <div className="flex flex-col lg:flex-row items-center mt-4 lg:mt-0">
                         <div className="relative mb-4 lg:mb-0 lg:mr-6">
-                            <div className="text-red-400 text-xl font-semibold font-['Poppins'] capitalize leading-tight">Follow us</div>
+                            <div className="text-red-400 text-xl font-semibold capitalize leading-tight">Follow us</div>
                         </div>
                         <div className="flex space-x-4">
                             <a href="#" className="relative w-11 h-11 bg-white rounded-full flex items-center justify-center">

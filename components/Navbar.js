@@ -14,7 +14,7 @@ const Navbar = () => {
                 <Link href="/">
                     <div className="flex items-center cursor-pointer">
                         <img src="/assets/images/logo.png" className="mr-3 w-[57px] h-[77.03px]" alt="Gernimas Logo" />
-                        <div className="w-[127px] h-[36.97px] text-[#E5677A] text-2xl font-bold font-['Poppins']">GERNIMAS</div>
+                        <div className="w-[127px] h-[36.97px] text-[#E5677A] text-2xl font-bold">GERNIMAS</div>
                     </div>
                 </Link>
                 <div className="flex md:hidden">
@@ -32,28 +32,28 @@ const Navbar = () => {
                     <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                         <li>
                             <Link href="/home">
-                                <div className="w-12 h-6 pt-2 text-red-400/80 text-base font-bold font-['Poppins'] hover:text-red-400 transition duration-300 ease-in-out cursor-pointer">
+                                <div className="w-12 h-6 pt-2 text-red-400/80 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out cursor-pointer">
                                     HOME
                                 </div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/article">
-                                <div className="w-[60px] h-6 pt-2 text-center text-red-400/80 text-base font-bold font-['Poppins'] hover:text-red-400 transition duration-300 ease-in-out cursor-pointer">
+                                <div className="w-[60px] h-6 pt-2 text-center text-red-400/80 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out cursor-pointer">
                                     ARTICLE
                                 </div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/tracking">
-                                <div className="w-[87px] h-6 pt-2 text-red-400/80 text-base font-bold font-['Poppins'] hover:text-red-400 transition duration-300 ease-in-out cursor-pointer">
+                                <div className="w-[87px] h-6 pt-2 text-red-400/80 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out cursor-pointer">
                                     TRACKING
                                 </div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/notification">
-                                <div className="w-[116px] h-6 pt-2 mb-3 text-red-400/80 text-base font-bold font-['Poppins'] hover:text-red-400 transition duration-300 ease-in-out cursor-pointer">
+                                <div className="w-[116px] h-6 pt-2 mb-3 text-red-400/80 text-base font-bold hover:text-red-400 transition duration-300 ease-in-out cursor-pointer">
                                     NOTIFICATION
                                 </div>
                             </Link>
@@ -62,7 +62,7 @@ const Navbar = () => {
                             <Link href="/login">
                                 <div className="w-[106px] h-[41px] relative cursor-pointer">
                                     <div className="w-[106px] h-[41px] left-0 top-0 absolute bg-red-300/60 rounded-[10px]">
-                                        <div className="w-[50px] left-[28px] top-[8.50px] absolute text-white text-base font-bold font-['Poppins']">
+                                        <div className="w-[50px] left-[28px] top-[8.50px] absolute text-white text-base font-bold">
                                             LOGIN
                                         </div>
                                     </div>
