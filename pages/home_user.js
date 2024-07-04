@@ -17,10 +17,10 @@ const HomeUser = () => {
                 />
                 <div className="order-2 md:order-1 flex flex-col justify-start items-start gap-6">
                     <div className="flex flex-col justify-start items-start gap-4">
-                        <div className="text-red-400 text-xl md:text-3xl lg:text-4xl font-bold font-['Poppins']">
+                        <div className="text-red-400 text-xl md:text-3xl lg:text-4xl font-bold">
                             Trusted Pregnancy Tracking for a Healthy Journey.
                         </div>
-                        <div className="text-red-400 text-xs text-justify md:text-left md:text-lg font-medium font-['Poppins'] md:mt-9">
+                        <div className="text-red-400 text-xs text-justify md:text-left md:text-lg font-medium md:mt-9">
                             Start your pregnancy journey with confidence using our trusted
                             tracking platform. Monitor your baby's development and your health
                             with accurate, personalized tools. Stay informed about important
@@ -29,7 +29,7 @@ const HomeUser = () => {
                     </div>
                     <div className="relative md:mt-16">
                         <div className="bg-red-300 opacity-50 rounded-[10px] w-36 h-9"></div>
-                        <div className="absolute left-0 top-0 w-36 h-9 flex justify-center items-center text-white text-base font-bold font-['Poppins']">
+                        <div className="absolute left-0 top-0 w-36 h-9 flex justify-center items-center text-white text-base font-bold">
                             GET STARTED
                         </div>
                     </div>
@@ -37,7 +37,7 @@ const HomeUser = () => {
             </div>
             {/* About Us */}
             <div className="bg-white md:p-16 pt-14">
-                <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold font-['Poppins'] mb-8">
+                <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
                     ABOUT US
                 </div>
                 <div className="flex flex-col md:flex-row justify-center items-center gap-8">
@@ -50,7 +50,7 @@ const HomeUser = () => {
                     </div>
                     <div className="w-full md:w-2/4">
                         <div className="p-2 md:p-5 bg-red-300 bg-opacity-10 rounded-[10px] border border-red-400 backdrop-blur-sm m-5">
-                            <div className="text-justify text-red-400 text-xs md:text-sm md:font-bold font-['Poppins'] leading-[16px] md:leading-[30px]">
+                            <div className="text-justify text-red-400 text-xs md:text-sm md:font-bold leading-[16px] md:leading-[30px]">
                                 GERNIMAS Strategi Ibu Cerdas Lahirkan Generasi Emas merupakan
                                 <span className="text-red-400"> website tracking</span>
                                 perkembangan ibu hamil yang terinspirasi dari Buku Kesehatan Ibu
@@ -64,7 +64,7 @@ const HomeUser = () => {
                             </div>
                         </div>
                         <div className="p-2 md:p-5 bg-red-300 bg-opacity-10 rounded-[10px] border border-red-400 backdrop-blur-sm m-5">
-                            <div className="text-justify text-red-400 text-xs md:text-sm md:font-bold font-['Poppins'] leading-[16px] md:leading-[30px]">
+                            <div className="text-justify text-red-400 text-xs md:text-sm md:font-bold leading-[16px] md:leading-[30px]">
                                 Dalam rangka mengoptimalkan pelayanan kesehatan ibu dan anak di
                                 Indonesia, pembuatan website ini menjadi langkah progresif yang
                                 bertujuan untuk meningkatkan efisiensi, aksesibilitas, dan
@@ -82,7 +82,7 @@ const HomeUser = () => {
 
             {/*Services  */}
             {/* <div className="bg-white md:p-16 pt-14">
-                <div class="w-full text-center text-red-400 text-xl md:text-3xl font-bold font-['Poppins'] mb-8 uppercase">
+                <div class="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8 uppercase">
                     Services
                 </div>
             </div> */}
@@ -108,7 +108,7 @@ const HomeUser = () => {
                                         className="-mt-1"
                                     />
                                     <div className="card-body ">
-                                        <div class="text-center text-red-400 text-xl font-bold font-['Poppins'] mt-4">
+                                        <div class="text-center text-red-400 text-xl font-bold mt-4">
                                             AGENDA
                                         </div>
                                         <div className="pt-7 ps-3">
@@ -138,7 +138,7 @@ const HomeUser = () => {
                                         className="-mt-1"
                                     />
                                     <div className="card-body ">
-                                        <div class="text-center text-red-400 text-xl font-bold font-['Poppins'] mt-4 uppercase">
+                                        <div class="text-center text-red-400 text-xl font-bold mt-4 uppercase">
                                             Asupan Gizi
                                         </div>
                                         <div className="pt-7 ps-3">
@@ -168,7 +168,7 @@ const HomeUser = () => {
                                         className="-mt-1"
                                     />
                                     <div className="card-body ">
-                                        <div class="text-center text-red-400 text-xl font-bold font-['Poppins'] uppercase">
+                                        <div class="text-center text-red-400 text-xl font-bold uppercase">
                                             suplemen
                                         </div>
                                         <div className="pt-7 ps-3">
@@ -200,7 +200,7 @@ const HomeUser = () => {
                                         className="-mt-1"
                                     />
                                     <div className="card-body ">
-                                        <div class="text-center text-red-400 text-xl font-bold font-['Poppins'] mt-4 uppercase">
+                                        <div class="text-center text-red-400 text-xl font-bold mt-4 uppercase">
                                             faskes terdekat
                                         </div>
                                         <div className="pt-7 ps-3">
@@ -230,7 +230,7 @@ const HomeUser = () => {
                                         className="-mt-1"
                                     />
                                     <div className="card-body ">
-                                        <div class="text-center text-red-400 text-xl font-bold font-['Poppins'] mt-4 uppercase">
+                                        <div class="text-center text-red-400 text-xl font-bold mt-4 uppercase">
                                             riwayat periksa
                                         </div>
                                         <div className="pt-7 ps-3">
@@ -260,7 +260,7 @@ const HomeUser = () => {
                                         className="-mt-1"
                                     />
                                     <div className="card-body ">
-                                        <div class="text-center text-red-400 text-xl font-bold font-['Poppins'] mt-4 uppercase">
+                                        <div class="text-center text-red-400 text-xl font-bold mt-4 uppercase">
                                             data pengguna
                                         </div>
                                         <div className="pt-7 ps-3">
@@ -293,7 +293,7 @@ const HomeUser = () => {
 
             {/* Article */}
             <div className="bg-white md:p-16 pt-14">
-                <div class="w-full text-center text-red-400 text-xl md:text-3xl font-bold font-['Poppins'] mb-8">
+                <div class="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
                     ARTICLE
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -304,10 +304,10 @@ const HomeUser = () => {
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
-                            <div class="text-rose-500 text-[13px] font-medium font-['Poppins'] leading-3 tracking-wide">
+                            <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                                 IBU HAMIL
                             </div>
-                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal font-['Poppins'] leading-[22px]  md:leading-[30px] mt-4">
+                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                                 Hamil"
                             </div>
@@ -320,10 +320,10 @@ const HomeUser = () => {
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
-                            <div class="text-rose-500 text-[13px] font-medium font-['Poppins'] leading-3 tracking-wide">
+                            <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                                 IBU HAMIL
                             </div>
-                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal font-['Poppins'] leading-[22px]  md:leading-[30px] mt-4">
+                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                                 Hamil"
                             </div>
@@ -336,10 +336,10 @@ const HomeUser = () => {
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
-                            <div class="text-rose-500 text-[13px] font-medium font-['Poppins'] leading-3 tracking-wide">
+                            <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                                 IBU HAMIL
                             </div>
-                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal font-['Poppins'] leading-[22px]  md:leading-[30px] mt-4">
+                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                                 Hamil"
                             </div>
@@ -354,10 +354,10 @@ const HomeUser = () => {
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
-                            <div class="text-rose-500 text-[13px] font-medium font-['Poppins'] leading-3 tracking-wide">
+                            <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                                 IBU HAMIL
                             </div>
-                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal font-['Poppins'] leading-[22px]  md:leading-[30px] mt-4">
+                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                                 Hamil"
                             </div>
@@ -370,10 +370,10 @@ const HomeUser = () => {
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
-                            <div class="text-rose-500 text-[13px] font-medium font-['Poppins'] leading-3 tracking-wide">
+                            <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                                 IBU HAMIL
                             </div>
-                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal font-['Poppins'] leading-[22px]  md:leading-[30px] mt-4">
+                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                                 Hamil"
                             </div>
@@ -386,10 +386,10 @@ const HomeUser = () => {
                             class="w-full h-48 object-cover"
                         />
                         <div class="p-4">
-                            <div class="text-rose-500 text-[13px] font-medium font-['Poppins'] leading-3 tracking-wide">
+                            <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                                 IBU HAMIL
                             </div>
-                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal font-['Poppins'] leading-[22px]  md:leading-[30px] mt-4">
+                            <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                                 Hamil"
                             </div>
@@ -399,7 +399,7 @@ const HomeUser = () => {
                 <div className="flex justify-center mt-10 pb-10 md:pb-0">
                     <div class="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
                         <Link href="/tracking">
-                            <div class="w-[135px] text-center text-red-400 text-sm font-bold font-['Poppins'] leading-[30px]">
+                            <div class="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
                                 SELENGKAPNYA
                             </div>
                         </Link>
