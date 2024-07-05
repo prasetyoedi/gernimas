@@ -73,7 +73,7 @@ const Navbar = () => {
                         <li>
                             <Link href="/login" passHref>
                                 <div className="w-[106px] h-[41px] relative cursor-pointer">
-                                    <div className={`w-[106px] h-[41px] left-0 top-0 absolute ${isActive('/login') ? 'bg-red-400' : 'bg-red-300/60'} rounded-[10px]`}>
+                                    <div className={`w-[106px] h-[41px] left-0 top-0 absolute ${isActive('/login') ? 'bg-red-600' : 'bg-red-600/60'} rounded-[10px]`}>
                                         <div className="w-[50px] left-[28px] top-[8.50px] absolute text-white text-base font-bold">
                                             LOGIN
                                         </div>
