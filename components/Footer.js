@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="w-full h-auto relative bg-red-50 py-6">
+        <footer className="w-full h-auto relative bg-[rgba(250,225,228,1)] py-6">
             <div className="container mx-auto px-6 lg:px-16">
                 <div className="flex flex-col lg:flex-row items-center lg:items-start">
                     <img className="w-14 h-18 mb-4 lg:mb-0 lg:mr-4" src="/assets/images/logo.png" alt="Logo" />
