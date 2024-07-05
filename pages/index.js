@@ -23,13 +23,12 @@ export default function Home() {
         <div className="order-2 md:order-1 flex flex-col justify-start items-start gap-6">
           <div className="flex flex-col justify-start items-start gap-4">
             <div className="text-red-400 text-xl md:text-3xl lg:text-4xl font-bold">
-              Trusted Pregnancy Tracking for a Healthy Journey.
+              Tracking Kehamilan Tepercaya untuk Perjalanan Sehat.
             </div>
             <div className="text-red-400 text-xs text-justify md:text-left md:text-lg font-medium md:mt-9">
-              Start your pregnancy journey with confidence using our trusted
-              tracking platform. Monitor your baby's development and your health
-              with accurate, personalized tools. Stay informed about important
-              milestones and enjoy a healthy, joyful pregnancy.
+            Tingkatkan perjalanan kehamilan Anda dengan percaya diri bersama Gernimas. 
+            Pantau perkembangan bayi dan kesehatan Anda dengan alat yang akurat dan personal. 
+            Dapatkan informasi terkini tentang setiap tahap penting dan nikmati kehamilan yang sehat dan bahagia.
             </div>
           </div>
           <div className="relative md:mt-16">
@@ -86,103 +85,103 @@ export default function Home() {
       </div>
       {/* Article */}
       <div className="bg-white md:p-16 pt-14">
-        <div class="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
+        <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
           ARTICLE
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden m-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
-              class="w-full h-48 object-cover"
+              className="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
+            <div className="p-4">
+              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                 IBU HAMIL
               </div>
-              <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
+              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                 Hamil"
               </div>
             </div>
           </div>
-          <div class="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
-              class="w-full h-48 object-cover"
+              className="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
+            <div className="p-4">
+              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                 IBU HAMIL
               </div>
-              <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
+              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                 Hamil"
               </div>
             </div>
           </div>
-          <div class="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
-              class="w-full h-48 object-cover"
+              className="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
+            <div className="p-4">
+              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                 IBU HAMIL
               </div>
-              <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
+              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                 Hamil"
               </div>
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-white shadow-md rounded-lg overflow-hidden m-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
-              class="w-full h-48 object-cover"
+              className="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
+            <div className="p-4">
+              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                 IBU HAMIL
               </div>
-              <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
+              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                 Hamil"
               </div>
             </div>
           </div>
-          <div class="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
-              class="w-full h-48 object-cover"
+              className="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
+            <div className="p-4">
+              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                 IBU HAMIL
               </div>
-              <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
+              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                 Hamil"
               </div>
             </div>
           </div>
-          <div class="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
-              class="w-full h-48 object-cover"
+              className="w-full h-48 object-cover"
             />
-            <div class="p-4">
-              <div class="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
+            <div className="p-4">
+              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                 IBU HAMIL
               </div>
-              <div class="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
+              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                 Hamil"
               </div>
@@ -190,9 +189,9 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center mt-10 pb-10 md:pb-0">
-          <div class="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
-            <Link href="/tracking">
-              <div class="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
+          <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
+            <Link href="/article">
+              <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
                 SELENGKAPNYA
               </div>
             </Link>
