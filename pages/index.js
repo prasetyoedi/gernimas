@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import ArtikelCard from '../components/ArtikelCard';
+import LayananCard from '../components/LayananCard';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +25,7 @@ export default function Home() {
         <div className="order-2 md:order-1 flex flex-col justify-start items-start gap-6">
           <div className="flex flex-col justify-start items-start gap-4">
             <div className="text-red-400 text-xl md:text-3xl lg:text-4xl font-bold">
-              Pemantauan Kehamilan Tepercaya untuk Perjalanan Sehat.
+              Tracking Kehamilan Tepercaya untuk Perjalanan Sehat.
             </div>
             <div className="text-red-400 text-xs text-justify md:text-left md:text-lg font-medium md:mt-9">
             Tingkatkan perjalanan kehamilan Anda dengan percaya diri bersama Gernimas. 
@@ -32,7 +34,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative md:mt-16">
-            <div className="bg-red-500 opacity-50 rounded-[10px] w-[178px] h-[36px] flex justify-center items-center p-2 shadow-lg cursor-pointer hover:shadow-lg hover:bg-red-600 transform transition-transform duration-1000 hover:scale-110 hover:shadow-lg">
+            <div className="bg-red-500 opacity-50 rounded-[10px] w-[178px] h-[36px] flex justify-center items-center p-2 shadow-lg cursor-pointer hover:shadow-lg hover:bg-red-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
               <div className="absolute left-0 top-0 w-full h-full flex justify-center items-center text-white text-base font-bold">
                 MULAI PEMANTAUAN
               </div>
@@ -90,113 +92,47 @@ export default function Home() {
           ARTIKEL
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-            <img
-              src="/assets/images/article.png"
-              alt="Pregnant woman cutting fruit"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                IBU HAMIL
-              </div>
-              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px] md:leading-[30px] mt-4">
-                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                Hamil"
-              </div>
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-            <img
-              src="/assets/images/article.png"
-              alt="Pregnant woman cutting fruit"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                IBU HAMIL
-              </div>
-              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                Hamil"
-              </div>
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-            <img
-              src="/assets/images/article.png"
-              alt="Pregnant woman cutting fruit"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                IBU HAMIL
-              </div>
-              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                Hamil"
-              </div>
-            </div>
-          </div>
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="IBU HAMIL"
+            title="Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil"
+          />
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="KESEHATAN ANAK"
+            title="Pentingnya Vaksinasi untuk Anak"
+          />
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="GIZI SEHAT"
+            title="Makanan Sehat untuk Menjaga Berat Badan Ideal"
+          />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-            <img
-              src="/assets/images/article.png"
-              alt="Pregnant woman cutting fruit"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                IBU HAMIL
-              </div>
-              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                Hamil"
-              </div>
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-            <img
-              src="/assets/images/article.png"
-              alt="Pregnant woman cutting fruit"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                IBU HAMIL
-              </div>
-              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                Hamil"
-              </div>
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-            <img
-              src="/assets/images/article.png"
-              alt="Pregnant woman cutting fruit"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                IBU HAMIL
-              </div>
-              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                Hamil"
-              </div>
-            </div>
-          </div>
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="IBU HAMIL"
+            title="Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil"
+          />
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="KESEHATAN ANAK"
+            title="Pentingnya Vaksinasi untuk Anak"
+          />
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="GIZI SEHAT"
+            title="Makanan Sehat untuk Menjaga Berat Badan Ideal"
+          />
         </div>
         <div className="flex justify-center mt-10 pb-10 md:pb-0">
-          <Link href="/artikel" passHref>
-            <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex items-center justify-center cursor-pointer hover:bg-red-400 transition-colors duration-1000">
-              <div className="text-center text-red-400 text-sm font-bold leading-[30px] hover:text-white">
-                SELENGKAPNYA
-              </div>
+             <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
+                <Link href="/artikel">
+                    <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
+                        SELENGKAPNYA
+                    </div>
+                </Link>
             </div>
-          </Link>
         </div>
       </div>
       <Footer />

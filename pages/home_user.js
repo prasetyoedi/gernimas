@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
+import ArtikelCard from '../components/ArtikelCard';
+import LayananCard from '../components/LayananCard';
 import { Inter } from "next/font/google";
 import Link from "next/link";
 
@@ -95,199 +97,45 @@ const HomeUser = () => {
                     <div className="flex flex-wrap justify-center items-center gap-6">
                         <div className="flex flex-col justify-start items-start gap-6 md:gap-10">
                             <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
-                                <Link href="/agenda">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
-                                        <img
-                                            src="/assets/images/services/agenda.png"
-                                            alt="Shoes"
-                                            className="-mt-1"
-                                        />
-                                        <div className="card-body ">
-                                            <div className="text-center text-red-400 text-xl font-bold mt-4">
-                                                AGENDA
-                                            </div>
-                                            <div className="pt-7 ps-3">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="14"
-                                                    height="14"
-                                                    viewBox="0 0 14 14"
-                                                    fill="none"
-                                                >
-                                                    <path
-                                                        d="M5.6665 3.00002H2.99984C2.26346 3.00002 1.6665 3.59697 1.6665 4.33335V11C1.6665 11.7364 2.26346 12.3334 2.99984 12.3334H9.6665C10.4029 12.3334 10.9998 11.7364 10.9998 11V8.33335M8.33317 1.66669H12.3332M12.3332 1.66669V5.66669M12.3332 1.66669L5.6665 8.33335"
-                                                        stroke="#E5677A"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-
-                                <Link href="/asupan-gizi">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
-                                        <img
-                                            src="/assets/images/services/asupan.png"
-                                            alt="Shoes"
-                                            className="-mt-1"
-                                        />
-                                        <div className="card-body ">
-                                            <div className="text-center text-red-400 text-xl font-bold mt-4 uppercase">
-                                                Asupan Gizi
-                                            </div>
-                                            <div className="pt-7 ps-3">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="14"
-                                                    height="14"
-                                                    viewBox="0 0 14 14"
-                                                    fill="none"
-                                                >
-                                                    <path
-                                                        d="M5.6665 3.00002H2.99984C2.26346 3.00002 1.6665 3.59697 1.6665 4.33335V11C1.6665 11.7364 2.26346 12.3334 2.99984 12.3334H9.6665C10.4029 12.3334 10.9998 11.7364 10.9998 11V8.33335M8.33317 1.66669H12.3332M12.3332 1.66669V5.66669M12.3332 1.66669L5.6665 8.33335"
-                                                        stroke="#E5677A"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-
-                                <Link href="/suplemen">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
-                                        <img
-                                            src="/assets/images/services/suplemen.png"
-                                            alt="Shoes"
-                                            className="-mt-1"
-                                        />
-                                        <div className="card-body ">
-                                            <div className="text-center text-red-400 text-xl font-bold uppercase">
-                                                suplemen
-                                            </div>
-                                            <div className="pt-7 ps-3">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="14"
-                                                    height="14"
-                                                    viewBox="0 0 14 14"
-                                                    fill="none"
-                                                >
-                                                    <path
-                                                        d="M5.6665 3.00002H2.99984C2.26346 3.00002 1.6665 3.59697 1.6665 4.33335V11C1.6665 11.7364 2.26346 12.3334 2.99984 12.3334H9.6665C10.4029 12.3334 10.9998 11.7364 10.9998 11V8.33335M8.33317 1.66669H12.3332M12.3332 1.66669V5.66669M12.3332 1.66669L5.6665 8.33335"
-                                                        stroke="#E5677A"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
+                            <LayananCard
+                                    imageUrl="/assets/images/services/agenda.png"
+                                    link="/agenda"
+                                    title="Agenda"
+                                    description="Teks deskripsi agenda."
+                                />
+                                <LayananCard
+                                    imageUrl="/assets/images/services/asupan.png"
+                                    link="/asupan-gizi"
+                                    title="Asupan Gizi"
+                                    description="Teks deskripsi asupan gizi."
+                                />
+                                <LayananCard
+                                    imageUrl="/assets/images/services/suplemen.png"
+                                    link="/suplemen"
+                                    title="Suplemen"
+                                    description="Teks deskripsi suplemen."
+                                />
                             </div>
 
                             <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
-                                <Link href="/faskes-terdekat">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
-                                        <img
-                                            src="/assets/images/services/faskes.png"
-                                            alt="Shoes"
-                                            className="-mt-1"
-                                        />
-                                        <div className="card-body ">
-                                            <div className="text-center text-red-400 text-xl font-bold mt-4 uppercase">
-                                                faskes terdekat
-                                            </div>
-                                            <div className="pt-7 ps-3">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="14"
-                                                    height="14"
-                                                    viewBox="0 0 14 14"
-                                                    fill="none"
-                                                >
-                                                    <path
-                                                        d="M5.6665 3.00002H2.99984C2.26346 3.00002 1.6665 3.59697 1.6665 4.33335V11C1.6665 11.7364 2.26346 12.3334 2.99984 12.3334H9.6665C10.4029 12.3334 10.9998 11.7364 10.9998 11V8.33335M8.33317 1.66669H12.3332M12.3332 1.66669V5.66669M12.3332 1.66669L5.6665 8.33335"
-                                                        stroke="#E5677A"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-
-                                <Link href="/riwayat-periksa">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
-                                        <img
-                                            src="/assets/images/services/riwayat.png"
-                                            alt="Shoes"
-                                            className="-mt-1"
-                                        />
-                                        <div className="card-body ">
-                                            <div className="text-center text-red-400 text-xl font-bold mt-3 uppercase">
-                                                riwayat periksa
-                                            </div>
-                                            <div className="pt-7 ps-3">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="14"
-                                                    height="14"
-                                                    viewBox="0 0 14 14"
-                                                    fill="none"
-                                                >
-                                                    <path
-                                                        d="M5.6665 3.00002H2.99984C2.26346 3.00002 1.6665 3.59697 1.6665 4.33335V11C1.6665 11.7364 2.26346 12.3334 2.99984 12.3334H9.6665C10.4029 12.3334 10.9998 11.7364 10.9998 11V8.33335M8.33317 1.66669H12.3332M12.3332 1.66669V5.66669M12.3332 1.66669L5.6665 8.33335"
-                                                        stroke="#E5677A"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-
-                                <Link href="/data-pengguna">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
-                                        <img
-                                            src="/assets/images/services/data.png"
-                                            alt="Shoes"
-                                            className="-mt-1"
-                                        />
-                                        <div className="card-body ">
-                                            <div className="text-center text-red-400 text-xl font-bold mt-4 uppercase">
-                                                data pengguna
-                                            </div>
-                                            <div className="pt-7 ps-3">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="14"
-                                                    height="14"
-                                                    viewBox="0 0 14 14"
-                                                    fill="none"
-                                                >
-                                                    <path
-                                                        d="M5.6665 3.00002H2.99984C2.26346 3.00002 1.6665 3.59697 1.6665 4.33335V11C1.6665 11.7364 2.26346 12.3334 2.99984 12.3334H9.6665C10.4029 12.3334 10.9998 11.7364 10.9998 11V8.33335M8.33317 1.66669H12.3332M12.3332 1.66669V5.66669M12.3332 1.66669L5.6665 8.33335"
-                                                        stroke="#E5677A"
-                                                        stroke-width="2"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
+                            <LayananCard
+                                    imageUrl="/assets/images/services/faskes.png"
+                                    link="/faskes-terdekat"
+                                    title="Faskes Terdekat"
+                                    description="Teks deskripsi faskes terdekat."
+                                />
+                                <LayananCard
+                                    imageUrl="/assets/images/services/riwayat.png"
+                                    link="/riwayat-periksa"
+                                    title="Riwayat Periksa"
+                                    description="Teks deskripsi riwayat periksa."
+                                />
+                                <LayananCard
+                                    imageUrl="/assets/images/services/data.png"
+                                    link="/data-pengguna"
+                                    title="Data Pengguna"
+                                    description="Teks deskripsi data pengguna."
+                                />
                             </div>
                         </div>
                         <div className="p-2.5 md:ps-40 md:block hidden">
@@ -297,123 +145,57 @@ const HomeUser = () => {
                 </div>
             </div>
 
-            {/* Artikel */}
-            <div className="bg-white md:p-16 pt-14">
-                <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
-                    ARTIKEL
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-                        <img
-                            src="/assets/images/article.png"
-                            alt="Pregnant woman cutting fruit"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                                IBU HAMIL
-                            </div>
-                            <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                                Hamil"
-                            </div>
-                        </div>
+    {/* Artikel */}
+      <div className="bg-white md:p-16 pt-14">
+        <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
+          ARTIKEL
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="IBU HAMIL"
+            title="Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil"
+          />
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="KESEHATAN ANAK"
+            title="Pentingnya Vaksinasi untuk Anak"
+          />
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="GIZI SEHAT"
+            title="Makanan Sehat untuk Menjaga Berat Badan Ideal"
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="IBU HAMIL"
+            title="Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil"
+          />
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="KESEHATAN ANAK"
+            title="Pentingnya Vaksinasi untuk Anak"
+          />
+          <ArtikelCard
+            imageUrl="/assets/images/article.png"
+            category="GIZI SEHAT"
+            title="Makanan Sehat untuk Menjaga Berat Badan Ideal"
+          />
+        </div>
+        <div className="flex justify-center mt-10 pb-10 md:pb-0">
+             <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
+                <Link href="/artikel">
+                    <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
+                        SELENGKAPNYA
                     </div>
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-                        <img
-                            src="/assets/images/article.png"
-                            alt="Pregnant woman cutting fruit"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                                IBU HAMIL
-                            </div>
-                            <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px] md:leading-[30px] mt-4">
-                                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                                Hamil"
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-                        <img
-                            src="/assets/images/article.png"
-                            alt="Pregnant woman cutting fruit"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                                IBU HAMIL
-                            </div>
-                            <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                                Hamil"
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-                        <img
-                            src="/assets/images/article.png"
-                            alt="Pregnant woman cutting fruit"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                                IBU HAMIL
-                            </div>
-                            <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                                Hamil"
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-                        <img
-                            src="/assets/images/article.png"
-                            alt="Pregnant woman cutting fruit"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                                IBU HAMIL
-                            </div>
-                            <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                                Hamil"
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
-                        <img
-                            src="/assets/images/article.png"
-                            alt="Pregnant woman cutting fruit"
-                            className="w-full h-48 object-cover"
-                        />
-                        <div className="p-4">
-                            <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                                IBU HAMIL
-                            </div>
-                            <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                                Hamil"
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex justify-center mt-10 pb-10 md:pb-0">
-                    <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
-                        <Link href="/artikel">
-                            <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
-                                SELENGKAPNYA
-                            </div>
-                        </Link>
-                    </div>
-                </div>
+                </Link>
             </div>
-            <Footer />
-        </div >
+        </div>
+      </div>
+    <Footer />
+    </div >
     );
 };
 
