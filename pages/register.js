@@ -38,7 +38,7 @@ const Register = () => {
         setTimeout(() => {
             setShowPopup(false);
             router.push("/home_user");
-        }, 2000); // Popup will be shown for 2 seconds
+        }, 2000);
     };
 
     const handleChangeStep1 = (e) => {

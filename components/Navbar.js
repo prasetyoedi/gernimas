@@ -42,22 +42,22 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/services" passHref>
-                                <div className={`w-[60px] h-6 pt-2 text-center ${isActive('/services') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
+                            <Link href="/layanan" passHref>
+                                <div className={`w-[60px] h-6 pt-2 text-center ${isActive('/layanan') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
                                     Layanan
                                 </div>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/tracking" passHref>
-                                <div className={`w-[94px] h-6 pt-2 ${isActive('/tracking') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
+                            <Link href="/pemantauan" passHref>
+                                <div className={`w-[94px] h-6 pt-2 ${isActive('/pemantauan') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
                                     Pemantauan
                                 </div>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/article" passHref>
-                                <div className={`w-[42px] h-6 pt-2 ${isActive('/article') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
+                            <Link href="/artikel" passHref>
+                                <div className={`w-[42px] h-6 pt-2 ${isActive('/artikel') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
                                     Artikel
                                 </div>
                             </Link>

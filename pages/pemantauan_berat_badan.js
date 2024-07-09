@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Chart from "chart.js/auto";
 import Link from "next/link";
 
-const TrackingBeratBadan = () => {
+const PemantauanBeratBadan = () => {
     const chartRef = useRef(null);
     const chartInstanceRef = useRef(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -84,7 +84,7 @@ const TrackingBeratBadan = () => {
                     <div className="w-full lg:w-[864px] rounded-[20px] bg-[rgba(255,140,157,0.20)] p-8">
                         <div className="flex justify-between items-start mb-4">
                             <p className="text-[#E5677A] text-[20px] font-bold">
-                                TRACKING BERAT BADAN
+                                PEMANTAUAN BERAT BADAN
                             </p>
                             <div className="relative">
                                 <div className="flex items-center gap-[12px]" onClick={toggleDropdown}>
@@ -184,5 +184,5 @@ const TrackingBeratBadan = () => {
     );
 };
 
-export default TrackingBeratBadan;
+export default PemantauanBeratBadan;
 
