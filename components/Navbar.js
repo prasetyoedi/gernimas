@@ -13,7 +13,7 @@ const Navbar = () => {
     const isActive = (path) => router.pathname === path;
 
     return (
-        <nav className="bg-[rgba(250,225,228,1)] px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 md:ps-16 md:px-16">
+        <nav className="bg-[rgba(250,225,228,1)] px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 md:ps-16 md:px-16 shadow-md sticky top-0 z-10">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <Link href="/" passHref>
                     <div className="flex items-center cursor-pointer">
@@ -62,7 +62,6 @@ const Navbar = () => {
                                 </div>
                             </Link>
                         </li>
-
                         <li>
                             <Link href="/notification" passHref>
                                 <div className={`w-[116px] h-6 pt-2 mb-3 ${isActive('/notification') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
@@ -82,7 +81,6 @@ const Navbar = () => {
                                     </div>
                                 </Link>
                             </li>
-
                             <li>
                                 <Link href="/login" passHref>
                                     <div className="w-[106px] h-[41px] relative cursor-pointer group">
