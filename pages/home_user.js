@@ -18,7 +18,7 @@ const HomeUser = () => {
                 <div className="order-2 md:order-1 flex flex-col justify-start items-start gap-6">
                     <div className="flex flex-col justify-start items-start gap-4">
                         <div className="text-red-400 text-xl md:text-3xl lg:text-4xl font-bold">
-                            Tracking Kehamilan Tepercaya untuk Perjalanan Sehat.
+                            Pemantauan Kehamilan Tepercaya untuk Perjalanan Sehat.
                         </div>
                         <div className="text-red-400 text-xs text-justify md:text-left md:text-lg font-medium md:mt-9">
                         Tingkatkan perjalanan kehamilan Anda dengan percaya diri bersama Gernimas. 
@@ -80,14 +80,8 @@ const HomeUser = () => {
                 </div>
             </div>
 
-            {/*Services  */}
-            {/* <div className="bg-white md:p-16 pt-14">
-                <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8 uppercase">
-                    Services
-                </div>
-            </div> */}
             <div className="flex flex-col justify-center items-center p-20 bg-white">
-                <div className="text-center text-red-400 text-3xl font-bold mb-12">SERVICES</div>
+                <div className="text-center text-red-400 text-3xl font-bold mb-12">LAYANAN</div>
                 <div className="w-full flex flex-col justify-start items-start gap-10">
                     <div className="flex flex-col justify-start items-start gap-2 rounded-[20px] bg-[rgba(255,140,157,0.20)] p-8">
                         <div className="text-red-400 text-3xl font-bold">
@@ -102,7 +96,7 @@ const HomeUser = () => {
                         <div className="flex flex-col justify-start items-start gap-6 md:gap-10">
                             <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
                                 <Link href="/agenda">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
                                         <img
                                             src="/assets/images/services/agenda.png"
                                             alt="Shoes"
@@ -134,7 +128,7 @@ const HomeUser = () => {
                                 </Link>
 
                                 <Link href="/asupan-gizi">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
                                         <img
                                             src="/assets/images/services/asupan.png"
                                             alt="Shoes"
@@ -166,7 +160,7 @@ const HomeUser = () => {
                                 </Link>
 
                                 <Link href="/suplemen">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
                                         <img
                                             src="/assets/images/services/suplemen.png"
                                             alt="Shoes"
@@ -200,7 +194,7 @@ const HomeUser = () => {
 
                             <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
                                 <Link href="/faskes-terdekat">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
                                         <img
                                             src="/assets/images/services/faskes.png"
                                             alt="Shoes"
@@ -232,7 +226,7 @@ const HomeUser = () => {
                                 </Link>
 
                                 <Link href="/riwayat-periksa">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
                                         <img
                                             src="/assets/images/services/riwayat.png"
                                             alt="Shoes"
@@ -264,7 +258,7 @@ const HomeUser = () => {
                                 </Link>
 
                                 <Link href="/data-pengguna">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
                                         <img
                                             src="/assets/images/services/data.png"
                                             alt="Shoes"
@@ -303,10 +297,10 @@ const HomeUser = () => {
                 </div>
             </div>
 
-            {/* Article */}
+            {/* Artikel */}
             <div className="bg-white md:p-16 pt-14">
                 <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
-                    ARTICLE
+                    ARTIKEL
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
@@ -410,7 +404,7 @@ const HomeUser = () => {
                 </div>
                 <div className="flex justify-center mt-10 pb-10 md:pb-0">
                     <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
-                        <Link href="/article">
+                        <Link href="/artikel">
                             <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
                                 SELENGKAPNYA
                             </div>

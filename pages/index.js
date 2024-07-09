@@ -23,7 +23,7 @@ export default function Home() {
         <div className="order-2 md:order-1 flex flex-col justify-start items-start gap-6">
           <div className="flex flex-col justify-start items-start gap-4">
             <div className="text-red-400 text-xl md:text-3xl lg:text-4xl font-bold">
-              Tracking Kehamilan Tepercaya untuk Perjalanan Sehat.
+              Pemantauan Kehamilan Tepercaya untuk Perjalanan Sehat.
             </div>
             <div className="text-red-400 text-xs text-justify md:text-left md:text-lg font-medium md:mt-9">
             Tingkatkan perjalanan kehamilan Anda dengan percaya diri bersama Gernimas. 
@@ -84,10 +84,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Article */}
+      {/* Artikel */}
       <div className="bg-white md:p-16 pt-14">
         <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
-          ARTICLE
+          ARTIKEL
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center mt-10 pb-10 md:pb-0">
-          <Link href="/article" passHref>
+          <Link href="/artikel" passHref>
             <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex items-center justify-center cursor-pointer hover:bg-red-400 transition-colors duration-1000">
               <div className="text-center text-red-400 text-sm font-bold leading-[30px] hover:text-white">
                 SELENGKAPNYA

@@ -39,12 +39,14 @@ const Login = () => {
                                 type="email"
                                 placeholder="Masukkan e-mail"
                                 className="w-full mb-6 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
+                                required
                             />
                             <div className="w-full mb-6 relative">
                                 <input
                                     type={passwordShown ? "text" : "password"}
                                     placeholder="Masukkan password"
                                     className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-400"
+                                    required
                                 />
                                 <button
                                     type="button"

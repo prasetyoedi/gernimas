@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-const Services = () => {
+const Layanan = () => {
     return (
         <div>
             <Navbar />
@@ -227,4 +227,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Layanan;

@@ -4,14 +4,14 @@ import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 
-const Article = () => {
+const Artikel = () => {
     return (
         <div>
             <Navbar />
-            {/* Article */}
+            {/* Artikel */}
             <div className="bg-white md:p-16 pt-14">
                 <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
-                ARTICLE
+                ARTIKEL
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
@@ -119,4 +119,4 @@ const Article = () => {
     );
 };
 
-export default Article;
+export default Artikel;

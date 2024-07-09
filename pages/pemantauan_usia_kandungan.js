@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-const Tracking = () => {
+const PemantauanUsiaKandungan = () => {
     return (
         <div>
             <Navbar />
@@ -39,4 +39,4 @@ const Tracking = () => {
     );
 };
 
-export default Tracking;
+export default PemantauanUsiaKandungan;
