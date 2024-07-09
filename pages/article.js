@@ -14,7 +14,7 @@ const Article = () => {
                 ARTICLE
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                     <img
                     src="/assets/images/article.png"
                     alt="Pregnant woman cutting fruit"
@@ -30,7 +30,7 @@ const Article = () => {
                     </div>
                     </div>
                 </div>
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                     <img
                     src="/assets/images/article.png"
                     alt="Pregnant woman cutting fruit"
@@ -46,7 +46,7 @@ const Article = () => {
                     </div>
                     </div>
                 </div>
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                     <img
                     src="/assets/images/article.png"
                     alt="Pregnant woman cutting fruit"
@@ -64,7 +64,7 @@ const Article = () => {
                 </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                     <img
                     src="/assets/images/article.png"
                     alt="Pregnant woman cutting fruit"
@@ -80,7 +80,7 @@ const Article = () => {
                     </div>
                     </div>
                 </div>
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                     <img
                     src="/assets/images/article.png"
                     alt="Pregnant woman cutting fruit"
@@ -96,7 +96,7 @@ const Article = () => {
                     </div>
                     </div>
                 </div>
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                     <img
                     src="/assets/images/article.png"
                     alt="Pregnant woman cutting fruit"

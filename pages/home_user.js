@@ -102,7 +102,7 @@ const HomeUser = () => {
                         <div className="flex flex-col justify-start items-start gap-6 md:gap-10">
                             <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
                                 <Link href="/agenda">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                                         <img
                                             src="/assets/images/services/agenda.png"
                                             alt="Shoes"
@@ -134,7 +134,7 @@ const HomeUser = () => {
                                 </Link>
 
                                 <Link href="/asupan-gizi">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                                         <img
                                             src="/assets/images/services/asupan.png"
                                             alt="Shoes"
@@ -166,7 +166,7 @@ const HomeUser = () => {
                                 </Link>
 
                                 <Link href="/suplemen">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                                         <img
                                             src="/assets/images/services/suplemen.png"
                                             alt="Shoes"
@@ -200,7 +200,7 @@ const HomeUser = () => {
 
                             <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
                                 <Link href="/faskes-terdekat">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                                         <img
                                             src="/assets/images/services/faskes.png"
                                             alt="Shoes"
@@ -232,7 +232,7 @@ const HomeUser = () => {
                                 </Link>
 
                                 <Link href="/riwayat-periksa">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                                         <img
                                             src="/assets/images/services/riwayat.png"
                                             alt="Shoes"
@@ -264,7 +264,7 @@ const HomeUser = () => {
                                 </Link>
 
                                 <Link href="/data-pengguna">
-                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
+                                    <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                                         <img
                                             src="/assets/images/services/data.png"
                                             alt="Shoes"
@@ -309,7 +309,7 @@ const HomeUser = () => {
                     ARTICLE
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                         <img
                             src="/assets/images/article.png"
                             alt="Pregnant woman cutting fruit"
@@ -325,7 +325,7 @@ const HomeUser = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                         <img
                             src="/assets/images/article.png"
                             alt="Pregnant woman cutting fruit"
@@ -335,13 +335,13 @@ const HomeUser = () => {
                             <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
                                 IBU HAMIL
                             </div>
-                            <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
+                            <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px] md:leading-[30px] mt-4">
                                 Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
                                 Hamil"
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                         <img
                             src="/assets/images/article.png"
                             alt="Pregnant woman cutting fruit"
@@ -359,7 +359,7 @@ const HomeUser = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                         <img
                             src="/assets/images/article.png"
                             alt="Pregnant woman cutting fruit"
@@ -375,7 +375,7 @@ const HomeUser = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                         <img
                             src="/assets/images/article.png"
                             alt="Pregnant woman cutting fruit"
@@ -391,7 +391,7 @@ const HomeUser = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer m-5 hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
                         <img
                             src="/assets/images/article.png"
                             alt="Pregnant woman cutting fruit"
