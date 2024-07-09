@@ -32,7 +32,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative md:mt-16">
-            <div className="bg-red-500 opacity-50 rounded-[10px] w-[178px] h-[36px] flex justify-center items-center p-2 shadow-md cursor-pointer hover:shadow-lg hover:bg-red-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div className="bg-red-500 opacity-50 rounded-[10px] w-[178px] h-[36px] flex justify-center items-center p-2 shadow-lg cursor-pointer hover:shadow-lg hover:bg-red-600 transform transition-transform duration-1000 hover:scale-110 hover:shadow-lg">
               <div className="absolute left-0 top-0 w-full h-full flex justify-center items-center text-white text-base font-bold">
                 MULAI PEMANTAUAN
               </div>
@@ -90,7 +90,23 @@ export default function Home() {
           ARTICLE
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
+            <img
+              src="/assets/images/article.png"
+              alt="Pregnant woman cutting fruit"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
+                IBU HAMIL
+              </div>
+              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px] md:leading-[30px] mt-4">
+                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
+                Hamil"
+              </div>
+            </div>
+          </div>
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
@@ -106,23 +122,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
-            <img
-              src="/assets/images/article.png"
-              alt="Pregnant woman cutting fruit"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <div className="text-rose-500 text-[13px] font-medium leading-3 tracking-wide">
-                IBU HAMIL
-              </div>
-              <div className="w-80 text-neutral-900 text-base md:text-xl font-normal leading-[22px]  md:leading-[30px] mt-4">
-                Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu
-                Hamil"
-              </div>
-            </div>
-          </div>
-          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
@@ -140,7 +140,7 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
@@ -156,7 +156,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
@@ -172,7 +172,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-white shadow-md rounded-lg overflow-hidden m-5">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
             <img
               src="/assets/images/article.png"
               alt="Pregnant woman cutting fruit"
@@ -190,13 +190,13 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center mt-10 pb-10 md:pb-0">
-          <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
-            <Link href="/article">
-              <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
+          <Link href="/article" passHref>
+            <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex items-center justify-center cursor-pointer hover:bg-red-400 transition-colors duration-1000">
+              <div className="text-center text-red-400 text-sm font-bold leading-[30px] hover:text-white">
                 SELENGKAPNYA
               </div>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
       <Footer />
