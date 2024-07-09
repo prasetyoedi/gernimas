@@ -37,28 +37,28 @@ const Navbar = () => {
                         <li>
                             <Link href="/" passHref>
                                 <div className={`w-16 h-6 pt-2 ${isActive('/') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
-                                    BERANDA
+                                    Beranda
                                 </div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/services" passHref>
                                 <div className={`w-[60px] h-6 pt-2 text-center ${isActive('/services') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
-                                    LAYANAN
+                                    Layanan
                                 </div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/tracking" passHref>
                                 <div className={`w-[94px] h-6 pt-2 ${isActive('/tracking') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
-                                    PEMANTAUAN
+                                    Pemantauan
                                 </div>
                             </Link>
                         </li>
                         <li>
                             <Link href="/article" passHref>
-                                <div className={`w-[46px] h-6 pt-2 mb-3 ${isActive('/article') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
-                                    ARTIKEL
+                                <div className={`w-[42px] h-6 pt-2 ${isActive('/article') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
+                                    Artikel
                                 </div>
                             </Link>
                         </li>
@@ -66,21 +66,35 @@ const Navbar = () => {
                         <li>
                             <Link href="/notification" passHref>
                                 <div className={`w-[116px] h-6 pt-2 mb-3 ${isActive('/notification') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
-                                    NOTIFIKASI
+                                    Notifikasi
                                 </div>
                             </Link>
                         </li>
-                        <li>
-                            <Link href="/login" passHref>
-                                <div className="w-[106px] h-[41px] relative cursor-pointer">
-                                    <div className={`w-[106px] h-[41px] left-0 top-0 absolute ${isActive('/login') ? 'bg-red-600' : 'bg-red-600/60'} rounded-[10px]`}>
-                                        <div className="w-[50px] left-[28px] top-[8.50px] absolute text-white text-base font-bold">
-                                            LOGIN
+                        <div className="flex space-x-2 mt-4 md:mt-0">
+                            <li>
+                                <Link href="/register" passHref>
+                                    <div className="w-[106px] h-[41px] relative cursor-pointer group">
+                                        <div className="w-[106px] h-[41px] left-0 top-0 absolute rounded-[10px] border-2 border-[rgba(255,140,157,0.30)] hover:bg-red-400 transition-colors duration-300 flex items-center justify-center">
+                                            <div className="text-red-400 text-base font-bold transition-colors duration-300 group-hover:text-white">
+                                                Daftar
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </Link>
-                        </li>
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link href="/login" passHref>
+                                    <div className="w-[106px] h-[41px] relative cursor-pointer group">
+                                        <div className={`w-[106px] h-[41px] left-0 top-0 absolute ${isActive('/login') ? 'bg-red-600' : 'bg-red-600/60'} rounded-[10px] transition-colors duration-300 flex items-center justify-center group-hover:bg-transparent group-hover:border-2 group-hover:border-[rgba(255,140,157,0.30)]`}>
+                                            <div className="text-white text-base font-bold transition-colors duration-300 group-hover:text-red-400">
+                                                Masuk
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </li>
+                        </div>
                     </ul>
                 </div>
             </div>

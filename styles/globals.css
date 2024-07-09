@@ -24,7 +24,6 @@ body {
   @apply font-poppins;
 }
 
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
