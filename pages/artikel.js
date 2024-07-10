@@ -36,7 +36,7 @@ const Artikel = () => {
                     />
                     <ArtikelCard
                         imageUrl="/assets/images/article.png"
-                        category="PENGOBATAN ALAMI"
+                        category="PENGOBATAN ALAMII"
                         title="Manfaat dan Cara Menggunakan Daun Sirsak untuk Kesehatan"
                     />
                     <ArtikelCard
