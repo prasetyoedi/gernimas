@@ -72,7 +72,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <div className="flex space-x-2 mt-4 md:mt-0">
-                            <li>
+                            {/* <li>
                                 <Link href="/register" passHref>
                                     <div className="w-[106px] h-[41px] relative cursor-pointer group">
                                         <div className="w-[106px] h-[41px] left-0 top-0 absolute rounded-[10px] border-2 border-[rgba(255,140,157,0.30)] hover:bg-red-400 transition-colors duration-300 flex items-center justify-center">
@@ -82,7 +82,7 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link href="/login" passHref>
                                     <div className="w-[106px] h-[41px] relative cursor-pointer group">
