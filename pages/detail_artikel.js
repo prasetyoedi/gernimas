@@ -10,7 +10,7 @@ const DetailArtikel = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col md:flex-row justify-start items-start gap-4 md:gap-20 p-4 md:p-16 bg-white">
+      <div className="flex flex-col md:flex-row justify-start items-start gap-4 md:gap-20 p-10 md:p-16 bg-white">
         <div className="flex flex-col w-full md:w-[990px] h-auto md:h-[1028px] items-start space-y-[34px]">
           <p className="w-full md:w-[763px] text-[25px] font-bold leading-[30px] text-red-400">
             Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil

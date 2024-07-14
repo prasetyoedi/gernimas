@@ -1,13 +1,16 @@
 import React from "react";
+import Link from "next/link";
 
 const GambarArtikelLainnya = ({ imageSrc, content }) => {
   return (
-    <div className="flex items-start gap-[30px] self-stretch mt-3">
-      <img src={imageSrc} className="w-[186px] h-[112px] rounded-lg" alt="Related Article Image" />
-      <p className="text-red-400">
-        {content}
-      </p>
-    </div>
+    <Link href="detail_artikel">
+        <div className="flex items-start gap-[30px] self-stretch mt-3">
+            <img src={imageSrc} className="w-[186px] h-[112px] rounded-lg" alt="Related Article Image" />
+            <p className="text-red-400">
+                {content}
+            </p>
+        </div>
+    </Link>
   );
 };
 
@@ -36,7 +39,8 @@ const ArtikelLainnya = () => {
     {
       imageSrc: "/assets/images/article/artikel_lain.png",
       content: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur."
-    }
+    },
+
   ];
 
   return (
