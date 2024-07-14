@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import ArtikelCard from '../components/ArtikelCard';
-import LayananCard from '../components/LayananCard';
+import ArtikelCard from "../components/ArtikelCard";
+import LayananCard from "../components/LayananCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,13 +28,14 @@ export default function Home() {
               Tracking Kehamilan Tepercaya untuk Perjalanan Sehat.
             </div>
             <div className="text-red-400 text-xs text-justify md:text-left md:text-lg font-medium md:mt-9">
-            Tingkatkan perjalanan kehamilan Anda dengan percaya diri bersama Gernimas. 
-            Pantau perkembangan bayi dan kesehatan Anda dengan alat yang akurat dan personal. 
-            Dapatkan informasi terkini tentang setiap tahap penting dan nikmati kehamilan yang sehat dan bahagia.
+              Tingkatkan perjalanan kehamilan Anda dengan percaya diri bersama
+              Gernimas. Pantau perkembangan bayi dan kesehatan Anda dengan alat
+              yang akurat dan personal. Dapatkan informasi terkini tentang
+              setiap tahap penting dan nikmati kehamilan yang sehat dan bahagia.
             </div>
           </div>
           <div className="relative md:mt-16">
-            <div className="bg-red-500 opacity-50 rounded-[10px] w-[178px] h-[36px] flex justify-center items-center p-2 shadow-lg cursor-pointer hover:shadow-lg hover:bg-red-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+            <div className="bg-red-500 opacity-50 rounded-[10px] w-[178px] h-[36px] flex justify-center items-center p-2 shadow-lg cursor-pointer hover:bg-red-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
               <div className="absolute left-0 top-0 w-full h-full flex justify-center items-center text-white text-base font-bold">
                 MULAI PEMANTAUAN
               </div>
@@ -126,13 +127,13 @@ export default function Home() {
           />
         </div>
         <div className="flex justify-center mt-10 pb-10 md:pb-0">
-             <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
-                <Link href="/artikel">
-                    <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
-                        SELENGKAPNYA
-                    </div>
-                </Link>
-            </div>
+          <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
+            <Link href="/artikel">
+              <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
+                SELENGKAPNYA
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />
