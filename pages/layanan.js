@@ -63,8 +63,8 @@ const Layanan = () => {
                                 />
                                 <LayananCard
                                     imageUrl="/assets/images/services/data.png"
-                                    link="/data-pengguna"
-                                    title="Data Pengguna"
+                                    link="/pemeriksaan_pribadi"
+                                    title="Periksa Pribadi"
                                     description="Teks deskripsi data pengguna."
                                 />
                             </div>
