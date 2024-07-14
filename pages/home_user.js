@@ -15,7 +15,7 @@ const artikelData = [
     {
         imageUrl: "/assets/images/article.png",
         category: "KESEHATAN ANAK",
-        title: "Pentingnya Vaksinasi untuk Anak"
+        title: "Pentingnya Vaksinasi untuk "
     },
     {
         imageUrl: "/assets/images/article.png",
