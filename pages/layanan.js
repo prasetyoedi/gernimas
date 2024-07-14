@@ -57,7 +57,7 @@ const Layanan = () => {
                                 />
                                 <LayananCard
                                     imageUrl="/assets/images/services/riwayat.png"
-                                    link="/riwayat-periksa"
+                                    link="/riwayat_periksa"
                                     title="Riwayat Periksa"
                                     description="Teks deskripsi riwayat periksa."
                                 />

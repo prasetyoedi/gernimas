@@ -42,14 +42,13 @@ const Navbar = () => {
                                 </div>
                             </Link>
                         </li>
-                        {/* <li>
+                        <li>
                             <Link href="/layanan" passHref>
                                 <div className={`w-[60px] h-6 pt-2 text-center ${isActive('/layanan') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
                                     Layanan
                                 </div>
                             </Link>
-                        </li> */}
-                        <Dropdown />
+                        </li>
 
                         <li>
                             <Link href="/pemantauan" passHref>

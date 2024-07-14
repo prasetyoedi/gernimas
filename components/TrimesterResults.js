@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Link from 'next/link';
+
 
 const TrimesterResults = () => {
     const [selectedTrimester, setSelectedTrimester] = useState(1);
@@ -11,7 +13,7 @@ const TrimesterResults = () => {
 
     return (
         <div className="container mx-auto p-3 md:ps-16 md:pe-16 md:pb-16 bg-white">
-            <div className="bg-[rgba(255,140,157,0.20)] p-4 md:p-8">
+            <div className="rounded-[20px] bg-[rgba(255,140,157,0.20)] p-4 md:p-8">
                 <div className="flex mb-4">
                     <nav className="flex space-x-4">
                         <button
@@ -41,17 +43,19 @@ const TrimesterResults = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
                     {results[selectedTrimester].map((result, index) => (
-                        <div
-                            key={index}
-                            className="bg-pink-50 border border-gray-200 rounded-lg shadow-sm p-4"
-                        >
-                            <div className="flex justify-center items-center h-32 bg-white border-b-2 border-pink-500 mb-4">
-                                <div className="text-pink-500 text-3xl">📋</div>
+                        <Link href="/detail_riwayat_periksa">
+                            <div
+                                key={index}
+                                className="bg-pink-50 border border-gray-200 shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-lg transition-transform duration-1000 p-4"
+                            >
+                                <div className="flex justify-center items-center h-32 bg-white border-b-2 border-pink-500 mb-4">
+                                    <div className="text-pink-500 text-3xl">📋</div>
+                                </div>
+                                <div className="text-center text-red-400 font-semibold">
+                                    {result}
+                                </div>
                             </div>
-                            <div className="text-center text-pink-500 font-semibold">
-                                {result}
-                            </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
