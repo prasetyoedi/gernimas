@@ -6,7 +6,40 @@ import Link from "next/link";
 import ArtikelCard from '../components/ArtikelCard';
 import LayananCard from '../components/LayananCard';
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+
+const artikelData = [
+  {
+      imageUrl: "/assets/images/article.png",
+      category: "IBU HAMIL",
+      title: "Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil"
+  },
+  {
+      imageUrl: "/assets/images/article.png",
+      category: "KESEHATAN ANAK",
+      title: "Pentingnya Vaksinasi untuk Anak"
+  },
+  {
+      imageUrl: "/assets/images/article.png",
+      category: "GIZI SEHAT",
+      title: "Makanan Sehat untuk Menjaga Berat Badan Ideal"
+  },
+  {
+      imageUrl: "/assets/images/article.png",
+      category: "KESEHATAN IBU",
+      title: "Perawatan Pasca Melahirkan yang Tepat"
+  },
+  {
+      imageUrl: "/assets/images/article.png",
+      category: "PENGOBATAN ALAMI",
+      title: "Manfaat dan Cara Menggunakan Daun Sirsak untuk Kesehatan"
+  },
+  {
+      imageUrl: "/assets/images/article.png",
+      category: "KULIT SEHAT",
+      title: "Tips Sederhana Merawat Kulit Wajah Agar Tetap Sehat"
+  }
+];
 
 export default function Home() {
   return (
@@ -88,53 +121,29 @@ export default function Home() {
       </div>
       {/* Artikel */}
       <div className="bg-white md:p-16 pt-14">
-        <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
-          ARTIKEL
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <ArtikelCard
-            imageUrl="/assets/images/article.png"
-            category="IBU HAMIL"
-            title="Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil"
-          />
-          <ArtikelCard
-            imageUrl="/assets/images/article.png"
-            category="KESEHATAN ANAK"
-            title="Pentingnya Vaksinasi untuk Anak"
-          />
-          <ArtikelCard
-            imageUrl="/assets/images/article.png"
-            category="GIZI SEHAT"
-            title="Makanan Sehat untuk Menjaga Berat Badan Ideal"
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <ArtikelCard
-            imageUrl="/assets/images/article.png"
-            category="IBU HAMIL"
-            title="Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil"
-          />
-          <ArtikelCard
-            imageUrl="/assets/images/article.png"
-            category="KESEHATAN ANAK"
-            title="Pentingnya Vaksinasi untuk Anak"
-          />
-          <ArtikelCard
-            imageUrl="/assets/images/article.png"
-            category="GIZI SEHAT"
-            title="Makanan Sehat untuk Menjaga Berat Badan Ideal"
-          />
-        </div>
-        <div className="flex justify-center mt-10 pb-10 md:pb-0">
-             <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
-                <Link href="/artikel">
-                    <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
-                        SELENGKAPNYA
+                <div className="w-full text-center text-red-400 text-xl md:text-3xl font-bold mb-8">
+                    ARTIKEL
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {artikelData.map((artikel, index) => (
+                        <ArtikelCard
+                            key={index}
+                            imageUrl={artikel.imageUrl}
+                            category={artikel.category}
+                            title={artikel.title}
+                        />
+                    ))}
+                </div>
+                <div className="flex justify-center mt-10 pb-10 md:pb-0">
+                    <div className="w-[179px] h-[31px] p-5 bg-white rounded-[10px] border border-red-400 backdrop-blur-sm flex-col justify-center items-end gap-2.5 inline-flex">
+                        <Link href="/artikel">
+                            <div className="w-[135px] text-center text-red-400 text-sm font-bold leading-[30px]">
+                                SELENGKAPNYA
+                            </div>
+                        </Link>
                     </div>
-                </Link>
+                </div>
             </div>
-        </div>
-      </div>
       <Footer />
     </div>
   );
