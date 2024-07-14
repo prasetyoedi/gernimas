@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Dropdown from '../components/Dropdown';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -41,13 +42,15 @@ const Navbar = () => {
                                 </div>
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href="/layanan" passHref>
                                 <div className={`w-[60px] h-6 pt-2 text-center ${isActive('/layanan') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
                                     Layanan
                                 </div>
                             </Link>
-                        </li>
+                        </li> */}
+                        <Dropdown />
+
                         <li>
                             <Link href="/pemantauan" passHref>
                                 <div className={`w-[94px] h-6 pt-2 ${isActive('/pemantauan') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>

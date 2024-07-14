@@ -1,14 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
-import LayananCard from '../components/LayananCard';
+import LayananCard from "../components/LayananCard";
 import Link from "next/link";
 
 const Layanan = () => {
     return (
         <div>
             <Navbar />
-            <div className="flex flex-col justify-center items-center p-20 bg-white">
+            <div className="flex flex-col justify-center items-center p-3 md:p-20 bg-white">
                 <div className="w-full flex flex-col justify-start items-start gap-10">
                     <div className="flex flex-col justify-start items-start gap-2 rounded-[20px] bg-[rgba(255,140,157,0.20)] p-8">
                         <div className="text-red-400 text-3xl font-bold">
@@ -21,7 +21,10 @@ const Layanan = () => {
                     </div>
                     <div className="flex flex-wrap justify-center items-center gap-6">
                         <div className="p-2.5 md:pe-40 md:block hidden">
-                            <img className="w-90 h-96" src="/assets/images/services/dokter.png" />
+                            <img
+                                className="w-90 h-96"
+                                src="/assets/images/services/dokter.png"
+                            />
                         </div>
                         <div className="flex flex-col justify-start items-start gap-6 md:gap-10">
                             <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
@@ -64,11 +67,11 @@ const Layanan = () => {
                                     title="Data Pengguna"
                                     description="Teks deskripsi data pengguna."
                                 />
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             <Footer />
         </div>
     );
