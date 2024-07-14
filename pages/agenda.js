@@ -214,24 +214,24 @@ const Agenda = () => {
     <div className='flex flex-col items-start gap-[10px] w-full lg:w-[724px] auto p-8 rounded-[20px] bg-[rgba(255,140,157,0.20)] shadow-md backdrop-blur-[20px] items-center justify-center'>
         <p className='text-center text-[20px] font-bold text-red-400'>Riwayat Catatan Harian</p>
         <div className="flex flex-col items-start gap-5 p-4 md:p-4 lg:p-4 items-center max-h-[500px] overflow-y-auto">
-            <div className="flex flex-col items-start gap-5 p-6 md:p-10 lg:p-26 bg-white rounded-3xl shadow-xl items-center">
-                <p className='text-center text-[16px] text-red-400'>Catatan 18 Januari 2024</p>
+            <div className="flex flex-col items-start gap-5 p-6 md:p-10 lg:p-26 bg-white rounded-3xl shadow-xl">
+                <p className='text-[16px] text-red-400'>Catatan 18 Januari 2024</p>
                 <div className='w-full h-[2px] bg-red-400'></div>
-                <p className='text-center text-[14px] text-red-400'>
+                <p className='text-[14px] text-red-400'>
                 Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. 
                 </p>
             </div>
-            <div className="flex flex-col items-start gap-5 p-10 md:p-10 lg:p-26 bg-white rounded-3xl shadow-xl items-center">
-                <p className='text-center text-[16px] text-red-400'>Catatan 12 Januari 2024</p>
+            <div className="flex flex-col items-start gap-5 p-10 md:p-10 lg:p-26 bg-white rounded-3xl shadow-xl">
+                <p className='text-[16px] text-red-400'>Catatan 12 Januari 2024</p>
                 <div className='w-full h-[2px] bg-red-400'></div>
-                <p className='text-center text-[14px] text-red-400'>
+                <p className='text-[14px] text-red-400'>
                 Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. 
                 </p>
             </div>
-            <div className="flex flex-col items-start gap-5 p-10 md:p-10 lg:p-26 bg-white rounded-3xl shadow-xl items-center">
-                <p className='text-center text-[16px] text-red-400'>Catatan 07 Januari 2024</p>
+            <div className="flex flex-col items-start gap-5 p-10 md:p-10 lg:p-26 bg-white rounded-3xl shadow-xl">
+                <p className='text-[16px] text-red-400'>Catatan 07 Januari 2024</p>
                 <div className='w-full h-[2px] bg-red-400'></div>
-                <p className='text-center text-[14px] text-red-400'>
+                <p className='text-[14px] text-red-400'>
                 Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. 
                 </p>
             </div>
