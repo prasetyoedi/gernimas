@@ -18,7 +18,7 @@ const DetailRiwayatPeriksa = () => {
             <div className="flex flex-col p-6 md:p-16 bg-white justify-center items-center">
                 <div className="flex flex-col w-full h-auto md:h-auto p-8 flex-shrink-0 rounded-[20px] bg-[rgba(255,140,157,0.20)] gap-4">
                     <div className="flex flex-col md:flex-row justify-between p-16 rounded-[20px] bg-white shadow-md w-full">
-                        <img src="/assets/riwayat-periksa/default-profile.png" className="w-[150px] h-[164px] md:w-[216px] md:h-[236px] mb-4" />
+                        <img src="/assets/images/riwayat-periksa/default-profile.png" className="w-[150px] h-[164px] md:w-[216px] md:h-[236px] mb-4" />
                         <div className="flex flex-col justify-center md:ml-8">
                             <p className="text-red-400 font-semibold text-[18px]">Nama Dokter</p>
                             <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 mt-4 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
