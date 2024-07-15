@@ -36,7 +36,7 @@ const Layanan = () => {
                                 />
                                 <LayananCard
                                     imageUrl="/assets/images/services/asupan.png"
-                                    link="/asupan-gizi"
+                                    link="/asupan_gizi"
                                     title="Asupan Gizi"
                                     description="Teks deskripsi asupan gizi."
                                 />
