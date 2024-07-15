@@ -3,8 +3,6 @@ import Navbar from "../components/Navbar";
 import PemantauanIbuHamilCard from '../components/PemantauanIbuHamilCard';
 import PemantauanJaninCard from '../components/PemantauanJaninCard';
 import Footer from "@/components/Footer";
-import { Inter } from "next/font/google";
-import Link from 'next/link';
 
 const pemantauanJaninData = [
     {
