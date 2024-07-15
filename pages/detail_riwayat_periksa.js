@@ -22,7 +22,7 @@ const DetailRiwayatPeriksa = () => {
     return (
         <div>
             <Navbar />
-            <div className="flex items-center gap-1.5 pt-6 pl-4 md:pl-20 bg-white flex-wrap">
+            <div className="flex flex-wrap items-center gap-1.5 pt-6 pl-4 md:pl-20 bg-white">
                 <p className="text-primary text-base font-bold leading-normal text-red-400">Layanan</p>
                 <img src="/assets/images/arrow.png" className="w-[20px] h-[20px]" />
                 <p className="text-custom-color text-red-400 text-base font-bold leading-normal">Riwayat Periksa</p>
@@ -33,25 +33,33 @@ const DetailRiwayatPeriksa = () => {
             </div>
             <div className="flex flex-col p-6 md:p-16 bg-white justify-center items-center">
                 <div className="flex flex-col w-full h-auto md:h-auto p-8 flex-shrink-0 rounded-[20px] bg-[rgba(255,140,157,0.20)] gap-4">
-                    <div className="flex flex-col md:flex-row justify-between p-16 rounded-[20px] bg-white shadow-md w-full">
-                        <img src="/assets/images/riwayat-periksa/default-profile.png" className="w-[150px] h-[164px] md:w-[216px] md:h-[236px] mb-4" />
-                        <div className="flex flex-col justify-center md:ml-8">
-                            <p className="text-red-400 font-semibold text-[18px]">Nama Dokter</p>
-                            <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 mt-4 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
-                                Dr. Lucia Leonie Sp.OG
-                            </p>
-                            <p className="text-red-400 font-semibold text-[18px] mt-4">Tanggal Pemeriksaan</p>
-                            <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 mt-4 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
-                                10 Juli 2023
-                            </p>
-                            <p className="text-red-400 font-semibold text-[18px] mt-4">Judul Pemeriksaan</p>
-                            <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 mt-4 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
-                                Pemeriksaan 1
-                            </p>
-                            <p className="text-red-400 font-semibold text-[18px] mt-4">Fasilitas Kesehatan</p>
-                            <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 mt-4 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
-                                RSA UGM
-                            </p>
+                    <div className="flex flex-col md:flex-row justify-between p-8 md:p-16 rounded-[20px] bg-white shadow-md w-full">
+                        <img src="/assets/images/riwayat-periksa/default-profile.png" className="w-[150px] h-[164px] md:w-[216px] md:h-[236px] mb-4 md:mb-0" />
+                        <div className="flex flex-col justify-center md:ml-8 space-y-4">
+                            <div>
+                                <p className="text-red-400 font-semibold text-[18px]">Nama Dokter</p>
+                                <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
+                                    Dr. Lucia Leonie Sp.OG
+                                </p>
+                            </div>
+                            <div>
+                                <p className="text-red-400 font-semibold text-[18px]">Tanggal Pemeriksaan</p>
+                                <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
+                                    10 Juli 2023
+                                </p>
+                            </div>
+                            <div>
+                                <p className="text-red-400 font-semibold text-[18px]">Judul Pemeriksaan</p>
+                                <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
+                                    Pemeriksaan 1
+                                </p>
+                            </div>
+                            <div>
+                                <p className="text-red-400 font-semibold text-[18px]">Fasilitas Kesehatan</p>
+                                <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
+                                    RSA UGM
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
