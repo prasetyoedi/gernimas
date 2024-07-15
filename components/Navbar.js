@@ -1,14 +1,23 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Dropdown from '../components/Dropdown';
+import DropdownProfile from './DropdownProfile'; 
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
     const router = useRouter();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    };
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
+
+    const closeDropdown = () => {
+        setDropdownOpen(false);
     };
 
     const isActive = (path) => router.pathname === path;
@@ -49,7 +58,6 @@ const Navbar = () => {
                                 </div>
                             </Link>
                         </li>
-
                         <li>
                             <Link href="/pemantauan" passHref>
                                 <div className={`w-[94px] h-6 pt-2 ${isActive('/pemantauan') ? 'text-red-400 font-bold' : 'text-red-400/80'} text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}>
@@ -72,17 +80,6 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <div className="flex space-x-2 mt-4 md:mt-0">
-                            {/* <li>
-                                <Link href="/register" passHref>
-                                    <div className="w-[106px] h-[41px] relative cursor-pointer group">
-                                        <div className="w-[106px] h-[41px] left-0 top-0 absolute rounded-[10px] border-2 border-[rgba(255,140,157,0.30)] hover:bg-red-400 transition-colors duration-300 flex items-center justify-center">
-                                            <div className="text-red-400 text-base font-bold transition-colors duration-300 group-hover:text-white">
-                                                Daftar
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </li> */}
                             <li>
                                 <Link href="/login" passHref>
                                     <div className="w-[106px] h-[41px] relative cursor-pointer group">
@@ -94,6 +91,24 @@ const Navbar = () => {
                                     </div>
                                 </Link>
                             </li>
+                            <div className="relative group">
+                                <button
+                                    className="w-20 h-10 rounded-full bg-red-400 text-white flex items-center justify-center"
+                                    onClick={toggleDropdown}
+                                >
+                                    N
+                                    <svg
+                                        className="ml-2 w-4 h-4 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                    >
+                                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
+                                </button>
+                                <DropdownProfile isOpen={dropdownOpen} onClose={closeDropdown} />
+                            </div>
                         </div>
                     </ul>
                 </div>
