@@ -1,5 +1,3 @@
-// pages/DetailArtikel.js or components/DetailArtikel.js
-
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
