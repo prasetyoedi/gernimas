@@ -61,13 +61,6 @@ const HomeUser = () => {
                             Dapatkan informasi terkini tentang setiap tahap penting dan nikmati kehamilan yang sehat dan bahagia.
                         </div>
                     </div>
-                    <div className="relative md:mt-16">
-                        <div className="bg-red-500 opacity-50 rounded-[10px] w-[178px] h-[36px] flex justify-center items-center p-2 shadow-md cursor-pointer hover:shadow-lg hover:bg-red-600 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-                            <div className="absolute left-0 top-0 w-full h-full flex justify-center items-center text-white text-base font-bold">
-                                MULAI PEMANTAUAN
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             {/* About Us */}

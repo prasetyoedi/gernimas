@@ -25,7 +25,7 @@ const AsupanGizi = () => {
     return (
         <div>
             <Navbar />
-            <div className="flex items-center gap-1.5 pt-6 pl-4 md:pl-20 bg-white">
+            <div className="flex flex-wrap items-center gap-1.5 pt-6 pl-4 md:pl-20 bg-white">
                 <p className="text-primary text-base font-bold leading-normal text-red-400">Layanan</p>
                 <img src="/assets/images/arrow.png" className="w-[20px] h-[20px]" />
                 <p className="text-custom-color text-red-400 text-base font-bold leading-normal">Asupan Gizi</p>
@@ -40,7 +40,7 @@ const AsupanGizi = () => {
                         <img src="/assets/images/services/woman.png" className="w-[218px] h-auto md:h-[163px]" />
                     </div>
                 </div>
-                <div className="flex flex-row w-full mt-6 h-auto flex-shrink-0 rounded-[20px] gap-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full mt-12 h-auto flex-shrink-0 rounded-[20px] justify-center">
                     {AsupanGiziTrimaster.map((card, index) => (
                         <AsupanGiziCard key={index} imageSrc={card.imageSrc} title={card.title} description={card.description} />
                     ))}

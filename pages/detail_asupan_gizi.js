@@ -60,27 +60,29 @@ const DetailAsupanGizi = () => {
             </div>
             <div className="flex flex-col p-6 md:p-16 bg-white justify-center items-center">
                 <div className="flex flex-col w-full h-auto md:h-auto p-8 flex-shrink-0 rounded-[20px] bg-[rgba(255,140,157,0.20)] gap-4">
-                    <div className="rounded-2xl w-full bg-white p-4 shadow overflow-x-auto">
-                        <table className="w-full bg-white text-red-400">
-                            <thead>
-                                <tr className="text-left">
-                                    <th className="px-4 py-2 border-b border-pink-200 w-[50px]">No</th>
-                                    <th className="px-4 py-2 border-b border-pink-200 w-[300px]">Bahan Makanan</th>
-                                    <th className="px-4 py-2 border-b border-pink-200 w-[150px]">Trimester 1</th>
-                                    <th className="px-4 py-2 border-b border-pink-200 w-[300px]">Keterangan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {foodData.map((food, index) => (
-                                    <tr key={index} className="hover:bg-pink-50">
-                                        <td className="px-4 py-4 border-b border-pink-200">{food.no}</td>
-                                        <td className="px-4 py-4 border-b border-pink-200">{food.item}</td>
-                                        <td className="px-4 py-4 border-b border-pink-200 whitespace-pre-line">{food.trimester1}</td>
-                                        <td className="px-4 py-4 border-b border-pink-200">{food.description}</td>
+                    <div className="rounded-2xl w-full bg-white p-4 shadow-md overflow-x-auto">
+                        <div className="table-responsive">
+                            <table className="w-full bg-white text-red-400">
+                                <thead>
+                                    <tr className="text-left">
+                                        <th className="px-4 py-2 border-b border-pink-200 md:w-[50px]">No</th>
+                                        <th className="px-4 py-2 border-b border-pink-200 md:w-[300px]">Bahan Makanan</th>
+                                        <th className="px-4 py-2 border-b border-pink-200 md:w-[150px]">Trimester 1</th>
+                                        <th className="px-4 py-2 border-b border-pink-200 md:w-[300px]">Keterangan</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    {foodData.map((food, index) => (
+                                        <tr key={index} className="hover:bg-pink-50">
+                                            <td className="px-4 py-4 border-b border-pink-200 md:px-2 md:py-2">{food.no}</td>
+                                            <td className="px-4 py-4 border-b border-pink-200 md:px-2 md:py-2">{food.item}</td>
+                                            <td className="px-4 py-4 border-b border-pink-200 md:px-2 md:py-2 whitespace-pre-line">{food.trimester1}</td>
+                                            <td className="px-4 py-4 border-b border-pink-200 md:px-2 md:py-2">{food.description}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
