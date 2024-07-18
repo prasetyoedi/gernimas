@@ -16,6 +16,7 @@ const foodData = [
         description: "1 Porsi = 50 gr atau 1 potong sedang ikan, 1 Porsi = 55 gr atau 1 butir telur ayam"
     },
     {
+        
         no: 3,
         item: "Protein Nabati seperti: tempe, tahu, dan lainnya",
         trimester1: "4 Porsi",

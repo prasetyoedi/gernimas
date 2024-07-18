@@ -33,6 +33,11 @@ const artikelData = [
         imageUrl: "/assets/images/article.png",
         category: "KULIT SEHAT",
         title: "Tips Sederhana Merawat Kulit Wajah Agar Tetap Sehat"
+    },
+    {
+        imageUrl: "/assets/images/article.png",
+        category: "KESEHATAN ANAK",
+        title: "Tips Sederhana Merawat Anak agar Tumbuh Sehat dan Cerdas"
     }
 ];
 
