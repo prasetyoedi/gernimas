@@ -14,7 +14,12 @@ const AuthProvider = ({ children }) => {
     if (!userData) {
       if (router.pathname != "/" && !isLogin) {
         getProfile().then((e) => {
-          if (!e?.data?.data) router.push("/");
+          if (!e?.data?.data) {
+            router.push("/");
+            setIsLogin(true);
+          } else {
+            setIsLogin(true);
+          }
         });
       }
     } else {

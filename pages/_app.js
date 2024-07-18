@@ -13,13 +13,13 @@ import { AuthProvider } from "./context/auth_context";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AuthProvider>
-      <React.StrictMode>
+    <React.StrictMode>
+      <AuthProvider>
         <div className={`${poppins.className} h-screen`}>
           <Component {...pageProps} />
         </div>
-      </React.StrictMode>
-    </AuthProvider>
+      </AuthProvider>
+    </React.StrictMode>
   );
 }
 

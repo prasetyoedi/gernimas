@@ -4,44 +4,21 @@ import Footer from "@/components/Footer";
 import ArtikelCard from "../components/ArtikelCard";
 import LayananCard from "../components/LayananCard";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "./context/auth_context";
-
-const artikelData = [
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "IBU HAMIL",
-    title: "Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "KESEHATAN ANAK",
-    title: "Pentingnya Vaksinasi untuk ",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "GIZI SEHAT",
-    title: "Makanan Sehat untuk Menjaga Berat Badan Ideal",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "KESEHATAN IBU",
-    title: "Perawatan Pasca Melahirkan yang Tepat",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "PENGOBATAN ALAMI",
-    title: "Manfaat dan Cara Menggunakan Daun Sirsak untuk Kesehatan",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "KULIT SEHAT",
-    title: "Tips Sederhana Merawat Kulit Wajah Agar Tetap Sehat",
-  },
-];
+import { getArticles } from "./api/get_articles";
 
 const HomeUser = () => {
+  const [articles, setArticles] = useState([]);
   const { user } = useContext(AuthContext);
+
+  useEffect(() => {
+    getArticles().then((res) => {
+      const data = res.data;
+      console.log(data);
+      setArticles(data);
+    });
+  }, []);
   return (
     <div>
       <Navbar />
@@ -187,9 +164,10 @@ const HomeUser = () => {
           ARTIKEL
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {artikelData.map((artikel, index) => (
+          {articles.map((artikel, index) => (
             <ArtikelCard
               key={index}
+              id={artikel.id}
               imageUrl={artikel.imageUrl}
               category={artikel.category}
               title={artikel.title}
