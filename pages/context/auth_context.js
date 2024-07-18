@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { getProfile } from "../api/get_profile";
+import { getProfile } from "../api/profile/get_profile";
 
 const AuthContext = createContext();
 

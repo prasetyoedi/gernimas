@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ArtikelLainnya from "../components/ArtikelLainnya";
-import { getArticle } from "./api/get_article";
+import { getArticle } from "./api/article/get_article";
 import { useParams } from "react-router-dom";
 
 const DetailArtikel = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { login } from "./api/auth_login";
+import { login } from "./api/auth/auth_login";
 import { AuthContext } from "./context/auth_context";
 
 const Login = () => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ArtikelCard from "../components/ArtikelCard";
-import { getArticles } from "./api/get_articles";
+import { getArticles } from "./api/article/get_articles";
 
 const artikelData = [
   {
@@ -46,13 +46,13 @@ const Artikel = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [articles, setArticles] = useState([]);
 
-  useEffect(() => {
-    getArticles().then((res) => {
-      const data = res.data;
-      console.log(data);
-      setArticles(data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   getArticles().then((res) => {
+  //     const data = res.data;
+  //     console.log(data);
+  //     setArticles(data);
+  //   });
+  // }, []);
 
   const filteredArtikelData = articles.filter(
     (artikel) =>
@@ -109,9 +109,12 @@ const Artikel = () => {
             </div>
           </div>
         ) : (
-          <div className="bg-red-200 text-red-400 p-4 rounded-lg">
-            Tidak ada hasil ditemukan
-          </div>
+          <>
+            <div className="bg-red-200 text-red-400 p-4 rounded-lg">
+              Tidak ada hasil ditemukan
+            </div>
+            <div style={{ height: 500 }}></div>
+          </>
         )}
       </div>
       <Footer />

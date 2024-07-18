@@ -6,7 +6,7 @@ import LayananCard from "../components/LayananCard";
 import Link from "next/link";
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "./context/auth_context";
-import { getArticles } from "./api/get_articles";
+import { getArticles } from "./api/article/get_articles";
 
 const HomeUser = () => {
   const [articles, setArticles] = useState([]);

@@ -1,4 +1,4 @@
-import { logout } from "@/pages/api/auth_logout";
+import { logout } from "@/pages/api/auth/auth_logout";
 import { AuthContext } from "@/pages/context/auth_context";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useRef } from "react";
