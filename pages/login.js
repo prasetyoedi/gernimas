@@ -25,7 +25,7 @@ const Login = () => {
       setShowPopup(true);
       setTimeout(() => {
         setShowPopup(false);
-        router.push("/home_user");
+        router.push("/");
       }, 2000);
     } else {
       setIsError(true);
