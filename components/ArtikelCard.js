@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const ArtikelCard = ({ id, imageUrl, category, title }) => {
   return (
-    <Link to={`/detail_artikel`}>
+    <Link href={`/detail_artikel?id=${id}`}>
       <div className="bg-white shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-2xl transition-transform duration-1000">
         <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
         <div className="p-4">

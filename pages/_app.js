@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Poppins } from "next/font/google";
 import React from "react";
 import App from "next/app";
+import { AuthProvider } from "./context/auth_context";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -9,7 +10,6 @@ const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
   preload: true,
 });
-import { AuthProvider } from "./context/auth_context";
 
 function MyApp({ Component, pageProps }) {
   return (

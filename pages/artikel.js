@@ -48,13 +48,14 @@ const Artikel = () => {
 
   // useEffect(() => {
   //   getArticles().then((res) => {
-  //     const data = res.data;
-  //     console.log(data);
-  //     setArticles(data);
+  //     if (res.data) {
+  //       const data = res.data;
+  //       setArticles(data);
+  //     }
   //   });
   // }, []);
 
-  const filteredArtikelData = articles.filter(
+  const filteredArtikelData = artikelData.filter(
     (artikel) =>
       artikel.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
       artikel.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -90,6 +91,7 @@ const Artikel = () => {
               {filteredArtikelData.slice(0, 3).map((artikel, index) => (
                 <ArtikelCard
                   key={index}
+                  id={index}
                   imageUrl={artikel.imageUrl}
                   category={artikel.category}
                   title={artikel.title}
