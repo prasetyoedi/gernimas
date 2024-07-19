@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { getProfile } from "../api/profile/get_profile";
+import { getProfile } from "../pages/api/profile/get_profile";
 
 const AuthContext = createContext();
 
@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (!userData) {
-      if (router.pathname != "/") {
+      if (router.pathname != "/" && !isLogin) {
         getProfile().then((e) => {
           if (!e?.data?.data) {
             router.push("/");
@@ -46,4 +46,4 @@ const AuthProvider = ({ children }) => {
   );
 };
 
-export { AuthContext, AuthProvider };
+export default { AuthContext, AuthProvider };

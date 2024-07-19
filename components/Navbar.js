@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import DropdownProfile from "./DropdownProfile";
-import { AuthContext } from "@/pages/context/auth_context";
+import AuthContext from "@/context/auth_context";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
