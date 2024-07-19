@@ -41,8 +41,8 @@ const Profile = () => {
 
     return (
         <div>
-            <Navbar />
-            <div className="flex flex-col p-6 md:p-20 bg-white">
+            {!isModalOpen && <Navbar />}
+            <div className={`flex flex-col p-6 md:p-20 bg-white ${isModalOpen ? 'filter blur-sm' : ''}`}>
                 <div className="flex justify-end mb-4">
                     <img 
                         src='/assets/images/profile/icon-edit.png' 
@@ -87,7 +87,7 @@ const Profile = () => {
             </div>
 
             {isModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 mt-20">
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="bg-white p-6 rounded-xl max-w-md w-full mx-8">
                         <form className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
@@ -143,7 +143,7 @@ const Profile = () => {
                 </div>
             )}
 
-            <Footer />
+            {!isModalOpen && <Footer />}
         </div>
     );
 };

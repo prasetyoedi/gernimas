@@ -131,7 +131,7 @@ const HomeUser = () => {
                                 />
                                 <LayananCard
                                     imageUrl="/assets/images/services/asupan.png"
-                                    link="/asupan-gizi"
+                                    link="/asupan_gizi"
                                     title="Asupan Gizi"
                                     description="Teks deskripsi asupan gizi."
                                 />
@@ -144,15 +144,15 @@ const HomeUser = () => {
                             </div>
 
                             <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
-                                <LayananCard
+                                {/* <LayananCard
                                     imageUrl="/assets/images/services/faskes.png"
                                     link="/faskes-terdekat"
                                     title="Faskes Terdekat"
                                     description="Teks deskripsi faskes terdekat."
-                                />
+                                /> */}
                                 <LayananCard
                                     imageUrl="/assets/images/services/riwayat.png"
-                                    link="/riwayat-periksa"
+                                    link="/riwayat_periksa"
                                     title="Riwayat Periksa"
                                     description="Teks deskripsi riwayat periksa."
                                 />
