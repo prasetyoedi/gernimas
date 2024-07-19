@@ -60,6 +60,12 @@ const DetailRiwayatPeriksa = () => {
                                     RSA UGM
                                 </p>
                             </div>
+                            <div>
+                                <p className="text-red-400 font-semibold text-[18px]">Fasilitas Kesehatan</p>
+                                <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
+                                    RSA UGM
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
