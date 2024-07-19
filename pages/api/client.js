@@ -1,5 +1,4 @@
 import axios from "axios";
-import Cookies from "js-cookie";
 
 const apiClient = axios.create({
   baseURL: "https://app.gernimas.com/api",
@@ -24,8 +23,6 @@ apiClient.interceptors.request.use(
 apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
-    // if (error.response.status === 401) {
-    // }
     return Promise.reject(error);
   }
 );

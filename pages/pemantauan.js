@@ -65,14 +65,14 @@ const Pemantauan = () => {
   // "berat_badan",
   // "lingkar_lengan",
   // "keluhan",
-  useEffect(() => {
-    getPemeriksaan().then((res) => {
-      const data = res.data;
-      if (data) {
-        console.log(data);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   getPemeriksaan().then((res) => {
+  //     const data = res.data;
+  //     if (data) {
+  //       console.log(data);
+  //     }
+  //   });
+  // }, []);
   return (
     <div>
       <Navbar />

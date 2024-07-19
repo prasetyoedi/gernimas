@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (!userData) {
-      if (router.pathname != "/" && !isLogin) {
+      if (router.pathname != "/") {
         getProfile().then((e) => {
           if (!e?.data?.data) {
             router.push("/");
