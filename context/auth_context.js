@@ -6,19 +6,15 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [isLogin, setIsLogin] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (!userData) {
-      if (router.pathname != "/" && !isLogin) {
+      if (router.pathname != "/") {
         getProfile().then((e) => {
           if (!e?.data?.data) {
-            router.push("/");
-            setIsLogin(true);
-          } else {
-            setIsLogin(true);
+            router.push("/login");
           }
         });
       }
