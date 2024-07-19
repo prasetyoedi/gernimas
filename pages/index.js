@@ -168,9 +168,9 @@ const HomeUser = () => {
             <ArtikelCard
               key={index}
               id={artikel.id}
-              imageUrl={artikel.imageUrl}
-              category={artikel.category}
-              title={artikel.title}
+              imageUrl={artikel.image}
+              category={artikel.author}
+              title={artikel.judul}
             />
           ))}
         </div>
