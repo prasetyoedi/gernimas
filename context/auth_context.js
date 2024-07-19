@@ -2,9 +2,9 @@ import React, { createContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { getProfile } from "../pages/api/profile/get_profile";
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
-const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLogin, setIsLogin] = useState(false);
   const router = useRouter();
@@ -45,5 +45,3 @@ const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-export default { AuthContext, AuthProvider };
