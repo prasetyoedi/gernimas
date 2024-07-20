@@ -147,4 +147,4 @@ const Login = () => {
   );
 };
 
-export default PemeriksaanPribadi;
+export default Login;
