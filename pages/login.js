@@ -5,14 +5,11 @@ import { login } from "./api/auth/auth_login";
 import { AuthContext } from "../context/auth_context";
 
 const Login = () => {
-  const [credential, setCredential] = useState({ email: "", password: "" });
-  const [isError, setIsError] = useState(false);
   const [passwordShown, setPasswordShown] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const router = useRouter();
-  const { login: loginContext } = useContext(AuthContext);
 
-  const togglePasswordVisibility = async () => {
+  const togglePasswordVisibility = () => {
     setPasswordShown(!passwordShown);
   };
 
@@ -150,4 +147,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default PemeriksaanPribadi;

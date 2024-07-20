@@ -58,7 +58,7 @@ const TrimesterResults = () => {
             <Link key={index} href="/detail_riwayat_periksa">
               <div
                 key={index}
-                className="bg-pink-50 border border-gray-200 shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-lg transition-transform duration-1000 p-4"
+                className="bg-pink-50 border border-gray-200 shadow-lg rounded-[20px] overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-lg transition-transform duration-1000 p-4"
               >
                 <div className="flex justify-center items-center h-32 bg-white border-b-2 border-pink-500 mb-4">
                   <div className="text-pink-500 text-3xl">📋</div>

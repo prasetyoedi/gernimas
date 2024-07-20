@@ -20,23 +20,23 @@ const PemantauanBeratBadan = () => {
         chartInstanceRef.current = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Pertama', 'Kedua', 'Ketiga', 'Keempat'],
+                labels: ['12 Januari 2024', '19 Januari 2024', '26 Januari 2024', '2 Februari 2024', '9 Februari 2024'],
                 datasets: [{
                     label: selectedMonth,
-                    data: [12, 19, 3, 5],
+                    data: [12, 19, 3, 5, 8],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
                         'rgba(54, 162, 235, 1)',
                         'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'rgba(153, 102, 255, 1)'
                     ],
                     borderWidth: 1
                 }]
@@ -96,7 +96,7 @@ const PemantauanBeratBadan = () => {
                                 {dropdownOpen && (
                                     <div className="absolute right-0 mt-2 w-48 bg-[#E5677A] border border-gray-300 rounded-lg shadow-lg z-10">
                                         <ul className="py-1 text-[12px]">
-                                            {['Januari 2024', 'Februari 2024', 'Maret                                             2024', 'April 2024', 'Mei 2024', 'Juni 2024', 'Juli 2024', 'Agustus 2024', 'September 2024', 'Oktober 2024', 'November 2024', 'Desember 2024'].map((month) => (
+                                            {['Januari 2024', 'Februari 2024', 'Maret 2024', 'April 2024', 'Mei 2024', 'Juni 2024', 'Juli 2024', 'Agustus 2024', 'September 2024', 'Oktober 2024', 'November 2024', 'Desember 2024'].map((month) => (
                                                 <li
                                                     key={month}
                                                     className="px-4 py-2 bg-[#E5677A] text-white hover:bg-[#d05463] cursor-pointer"
@@ -156,33 +156,52 @@ const PemantauanBeratBadan = () => {
                 </div>
                 <div className="w-full max-w-[1281px] rounded-[20px] bg-[rgba(255,140,157,0.20)] p-5">
                     <p className="text-[#E5677A] text-[22px] font-bold">
-                        Tahukah, Bunda? Berikut Merupakan Informasi Mengenai Berat Badan Bunda!
+                        Tahukah, Bunda? Berikut Merupakan Informasi Mengenai Indeks Massa Tubuh (IMT)
                     </p>
                 </div>
-                <div class="w-full max-w-[1281px] bg-white mb-10">
-                    <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 md:gap-60">
-                        <div class="flex flex-col items-center gap-8 md:gap-10">
-                            <div class="w-full md:w-104 h-auto p-10 border border-gray-300 rounded-lg bg-opacity-10 bg-red-200 shadow-md flex justify-center items-center mb-4 md:mb-0">
-                                <p class="text-center text-lg font-semibold text-red-500">
-                                    Peningkatan berat badan selama kehamilan tergantung dari berat badan sebelum hamil. Perhitungan BMI menggunakan ukuran berat badan dan tinggi badan untuk memperkirakan jumlah total lemak dalam tubuh.
-                                </p>
-                            </div>
-                            <div class="w-full md:w-104 h-auto p-10 border border-gray-300 rounded-lg bg-opacity-10 bg-red-200 shadow-md flex justify-center items-center">
-                                <p class="text-center text-lg font-semibold text-red-500">
-                                    Peningkatan berat badan selama kehamilan tergantung dari berat badan sebelum hamil. Perhitungan BMI menggunakan ukuran berat badan dan tinggi badan untuk memperkirakan jumlah total lemak dalam tubuh.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flex-shrink-0 w-full md:w-96 mt-4 md:mt-0">
-                            <img src="/assets/images/tracking/doctor.png" alt="Descriptive Alt Text" class="w-full h-auto rounded-lg"/>
+                <div className="w-full max-w-[1281px] rounded-[20px] bg-white p-5 overflow-x-auto">
+                    <table className="rounded-[20px] overflow-hidden min-w-full bg-white shadow-lg ">
+                        <thead>
+                            <tr className="bg-[#FFE3E7]">
+                                <th className="py-4 px-6 text-left">Keterangan</th>
+                                <th className="py-4 px-6 text-left">IMT (Kg/m²)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="py-4 px-6 border-t">Underweight</td>
+                                <td className="py-4 px-6 border-t">&lt;18,5</td>
+                            </tr>
+                            <tr className="bg-[#FFF5F7]">
+                                <td className="py-4 px-6 border-t">Normal</td>
+                                <td className="py-4 px-6 border-t">18,5 - 22,9</td>
+                            </tr>
+                            <tr>
+                                <td className="py-4 px-6 border-t">Overweight</td>
+                                <td className="py-4 px-6 border-t">23 - 24,9</td>
+                            </tr>
+                            <tr className="bg-[#FFF5F7]">
+                                <td className="py-4 px-6 border-t">Obesitas Tingkat I</td>
+                                <td className="py-4 px-6 border-t">25 - 29,9</td>
+                            </tr>
+                            <tr>
+                                <td className="py-4 px-6 border-t">Obesitas Tingkat II</td>
+                                <td className="py-4 px-6 border-t">&gt;30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <Link href='/artikel' passHref>
+                    <div className='cursor-pointer flex justify-center items-center'>
+                        <div className="text-[14px] bg-[#E5677A] text-white py-4 px-12 rounded-[10px]">
+                            Baca Artikel
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
             <Footer />
         </div>
     );
-};
+}
 
 export default PemantauanBeratBadan;
-
