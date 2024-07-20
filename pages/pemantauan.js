@@ -4,7 +4,7 @@ import PemantauanIbuHamilCard from "../components/PemantauanIbuHamilCard";
 import PemantauanJaninCard from "../components/PemantauanJaninCard";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
-import { getPemeriksaan } from "./api/pemeriksaan/get_pemeriksaan";
+import { getPemeriksaanMandiri } from "./api/pemeriksaan/get_pemeriksaan_mandiri";
 
 const pemantauanJaninData = [
   {
@@ -65,14 +65,11 @@ const Pemantauan = () => {
   // "berat_badan",
   // "lingkar_lengan",
   // "keluhan",
-  // useEffect(() => {
-  //   getPemeriksaan().then((res) => {
-  //     const data = res.data;
-  //     if (data) {
-  //       console.log(data);
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    getPemeriksaanMandiri().then((res) => {
+      console.log(res.data);
+    });
+  }, []);
   return (
     <div>
       <Navbar />

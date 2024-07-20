@@ -6,65 +6,6 @@ import ModalSuplemen from "@/components/ModalSuplemen";
 import { useEffect } from "react";
 import { getSuplemens } from "./api/suplemen/get_suplemens";
 
-const suplemenData = [
-  {
-    src: "/assets/images/suplemen/asam-folat.png",
-    alt: "Asam Folat",
-    label: "Asam Folat",
-    description:
-      "American College of Obstrics and Gynecology (ACOG) merekomendasikan ibu untuk mengonsumsi 600-800 mikrogram folat selama kehamilan. Ibu hamil memerlukan asam folat yang cukup untuk mencegah cacat pada sistem saraf bayi (neural tube defect – NTD). NTD mulai berkembang di 28 hari pertama setelah pembuahan. Ibu bisa mendapatkan asupan folat dari makanan, seperti hati, kacang-kacangan, telur, sayuran berdaun hijau tua, serta kacang polong. ",
-  },
-  {
-    src: "/assets/images/suplemen/kalsium.png",
-    alt: "Kalsium",
-    label: "Kalsium",
-    description:
-      "Ibu hamil membutuhkan 1000 miligram kalsium yang bisa dibagi dalam dua dosis 500 miligram per hari. Kalsium penting untuk inu hamil karena ibu hamil rentan akan kondisi osteoporosis. Kepadatan tulang ibu hamil banyak berkurang karena janin di dalam kandungan membutuhkannya untuk pertumbuhan tulangnya. Sumber kalsium yang baik bisa ditemukan pada susu, yoghurt, keju, ikan, dan seafood yang rendah merkuri, seperti salmon, udang, serta ikan lele, selain itu terdapat tahu yang mengandung kalsium juga sayuran berdaun hijau tua. Namun, perlu ditambahkan suplementasi kalsium sebanyak 1,5-2 gram untuk mencegah preeklampsia semasa kehamilan. ",
-  },
-  {
-    src: "/assets/images/suplemen/protein.png",
-    alt: "Protein",
-    label: "Protein",
-    description:
-      "Ibu hamil membutuhkan 1000 miligram kalsium yang bisa dibagi dalam dua dosis 500 miligram per hari. Kalsium penting untuk inu hamil karena ibu hamil rentan akan kondisi osteoporosis. Kepadatan tulang ibu hamil banyak berkurang karena janin di dalam kandungan membutuhkannya untuk pertumbuhan tulangnya. Sumber kalsium yang baik bisa ditemukan pada susu, yoghurt, keju, ikan, dan seafood yang rendah merkuri, seperti salmon, udang, serta ikan lele, selain itu terdapat tahu yang mengandung kalsium juga sayuran berdaun hijau tua. Namun, perlu ditambahkan suplementasi kalsium sebanyak 1,5-2 gram untuk mencegah preeklampsia semasa kehamilan. ",
-  },
-  {
-    src: "/assets/images/suplemen/ttd.png",
-    alt: "TTD",
-    label: "TTD",
-    description:
-      "Tableh tambah darah dinilai wajib karena untuk membentuk plasenta yang kuat, melancarkan sirkulasi oksigen dalam tubuh, dan menjaga kebugaran tubuh Bunda serta janin. Tablet tambah darah (TTD) harus diminum minimal 90 TABLET selama kehamilan.",
-  },
-  {
-    src: "/assets/images/suplemen/vitamin.png",
-    alt: "Vitamin",
-    label: "Vitamin",
-    description:
-      "Vitamin D Ibu hamil membutuhkan asupan vitamin D sebanyak 600 unit internasional (IU) per hari. Tujuannya untuk membantu menunjang kesehatan tulang dan gigi, serta mendukung pertumbuhan tulang janin. Jika kekurangan asupannya, tulang janin tidak dapat tumbuh secara maksimal. Nutrisi ini bisa ibu dapatkan dari salmon dan sarden, telur, serta daging. Selain itu, ibu juga bisa berjemur di bawah sinar matahari.",
-  },
-  {
-    src: "/assets/images/suplemen/zat-besi.png",
-    alt: "Zat Besi",
-    label: "Zat Besi",
-    description:
-      "Ibu hamil membutuhkan 27 miligram zar besi sehari. Nutrisi ini berperan untuk mengalirkan oksigen ke seluruh tubuh lewat aliran darah. Selain itu, zat besi juga berperan dalam pembentukan sel darah merah. Jika kekurangan asupannya, ibu hamil lebih rentan terkena anemia. Dampak lainnya, yaitu peningkatan risiko terkena anemia saat lahir, kelahiran prematur, dan bayi lahir dengan berat badan rendah. Cara untuk memenuhi kebutuhan nutrisi tersebut adalah dengan mengonsumsi makanan, seperti daging merah tanpa lemak, unggas, dan ikan. Pilihan makanan lain yang mengandung zat besi, yaitu sereal yang diperkaya zat besi, kacang-kacangan, dan sayuran. ",
-  },
-  {
-    src: "/assets/images/suplemen/zinc.png",
-    alt: "Zinc",
-    label: "Zinc",
-    description:
-      "Penelitian Zinc supplementation for improving pregnancy and infant outcome, yang dipublikasikan dalam About the Cochrane Database of Systematic Reviews menemukan, mengonsumsi seng selama kehamilan menurunkan risiko kelahiran prematur. Jadi, pastikan untuk memberikan suplemen atau makanan yang mengandung zinc sebelum kehamilan menginjak usia 27 minggu. Namun, jenis vitamin ibu hamil ini tidak mampu mencegah masalah lain, seperti bayi dengan berat lahir rendah.",
-  },
-  {
-    src: "/assets/images/suplemen/dha.png",
-    alt: "DHA",
-    label: "DHA",
-    description:
-      "DHA atau docosahexaenoic acid termasuk salah satu asam lemak omega-3. DHA mudah didapatkan secara alami dari ikan. Namun, pada ibu hamil yang kekurangan, dokter bisa memberikan suplemen tambahan. DHA sangat baik untuk perkembangan otak bayi baik sebelum maupun setelah lahir. ",
-  },
-];
-
 const Suplemen = () => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState({});
@@ -120,12 +61,12 @@ const Suplemen = () => {
           </div>
         </div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mt-8 p-8 bg-[rgba(255,140,157,0.20)] rounded-[20px] shadow-md backdrop-blur-[20px]">
-          {suplemenData.map((item, index) => (
+          {suplemens.map((item, index) => (
             <SuplemenCard
               key={index}
-              src={item.src}
-              alt={item.alt}
-              label={item.label}
+              src={item.gambar}
+              alt={item.suplemen}
+              label={item.suplemen}
               onClick={() => handleCardClick(item)}
             />
           ))}
