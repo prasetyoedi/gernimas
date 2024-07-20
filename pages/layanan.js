@@ -26,8 +26,8 @@ const Layanan = () => {
                                 src="/assets/images/services/dokter.png"
                             />
                         </div>
-                        <div className="flex flex-col justify-start items-start gap-6 md:gap-10">
-                            <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
+                        <div className="flex flex-col justify-start items-end gap-6 md:gap-10">
+                            <div className="flex justify-start items-end gap-6 md:gap-20 flex-wrap">
                                 <LayananCard
                                     imageUrl="/assets/images/services/agenda.png"
                                     link="/agenda"
@@ -48,13 +48,13 @@ const Layanan = () => {
                                 />
                             </div>
 
-                            <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
-                                <LayananCard
+                            <div className="flex justify-start items-end gap-6 md:gap-20 flex-wrap">
+                                {/* <LayananCard
                                     imageUrl="/assets/images/services/faskes.png"
                                     link="/faskes-terdekat"
                                     title="Faskes Terdekat"
                                     description="Teks deskripsi faskes terdekat."
-                                />
+                                /> */}
                                 <LayananCard
                                     imageUrl="/assets/images/services/riwayat.png"
                                     link="/riwayat_periksa"

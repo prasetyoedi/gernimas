@@ -6,16 +6,14 @@ const examinationData = [
     { no: 1, name: "Tinggi Badan", result: "160 cm" },
     { no: 2, name: "Berat Badan", result: "50 kg" },
     { no: 3, name: "Lingkar Lengan Atas", result: "22 cm" },
-    { no: 4, name: "Tekanan Darah", result: "120/80 mmhg" },
-    { no: 5, name: "Riwayat Penyakit", result: "Anemia" },
-    { no: 6, name: "Riwayat Penyakit Keluarga", result: "Melahirkan bayi kembar, hipertensi, jantung" },
-    { no: 7, name: "Letak dan Denyut Jantung Bayi", result: "Ball +" },
-    { no: 8, name: "Gula Darah", result: "95 mg/dL" },
-    { no: 9, name: "Hemoglobin", result: "11 g/dL" },
-    { no: 10, name: "Tinggi Rahim", result: "150 cm" },
-    { no: 11, name: "Letak Janin", result: "Letak Kepala, Presentasi Belakang Kepala" },
-    { no: 12, name: "Denyut Jantung Janin", result: "160 x/menit" },
-    { no: 13, name: "Gerakan Janin", result: "Aktif" }
+    { no: 4, name: "Letak & Denyut Jantung Bayi", result: "160 x/menit" },
+    { no: 5, name: "Hemoglobin", result: "11 g/dL" },
+    { no: 6, name: "Gula Darah", result: "95 mg/dL" },
+    { no: 7, name: "Tinggi Rahim", result: "150 cm" },
+    { no: 8, name: "Tekanan Darah", result: "120/80 mmhg" },
+    { no: 9, name: "Riwayat Penyakit Keluarga", result: "Melahirkan bayi kembar, hipertensi, jantung" },
+    { no: 10, name: "Riwayat Penyakit Pribadi", result: "Anemia" },
+    { no: 11, name: "Pemeriksaan Selanjutnya", result: "20 Januari 2024" },
 ];
 
 const DetailRiwayatPeriksa = () => {
@@ -48,18 +46,12 @@ const DetailRiwayatPeriksa = () => {
                                     10 Juli 2023
                                 </p>
                             </div>
-                            <div>
+                            {/* <div>
                                 <p className="text-red-400 font-semibold text-[18px]">Judul Pemeriksaan</p>
                                 <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
                                     Pemeriksaan 1
                                 </p>
-                            </div>
-                            <div>
-                                <p className="text-red-400 font-semibold text-[18px]">Fasilitas Kesehatan</p>
-                                <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
-                                    RSA UGM
-                                </p>
-                            </div>
+                            </div> */}
                             <div>
                                 <p className="text-red-400 font-semibold text-[18px]">Fasilitas Kesehatan</p>
                                 <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
