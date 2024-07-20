@@ -15,7 +15,6 @@ const HomeUser = () => {
   useEffect(() => {
     getArticles().then((res) => {
       const data = res.data;
-      console.log(data);
       setArticles(data);
     });
   }, []);

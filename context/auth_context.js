@@ -11,17 +11,13 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const userData = localStorage.getItem("user");
     if (!userData) {
-      router.push("/");
-      logout();
-      if (router.pathname != "/login") {
-        getProfile().then((e) => {
-          if (!e?.data?.data) {
-            if (router.pathname != "/") {
-              router.push("/");
-            }
+      getProfile().then((e) => {
+        if (!e?.data?.data) {
+          if (router.pathname != "/" || router.pathname != "/login") {
+            router.replace("/");
           }
-        });
-      }
+        }
+      });
     } else {
       setUser(JSON.parse(userData));
     }

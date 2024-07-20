@@ -1,6 +1,4 @@
-import { AuthContext } from "@/context/auth_context";
 import axios from "axios";
-import { useContext } from "react";
 
 const apiClient = axios.create({
   baseURL: "https://app.gernimas.com/api",
@@ -25,10 +23,9 @@ apiClient.interceptors.request.use(
 apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
-    const { logout } = useContext(AuthContext);
     if (error.response && error.response.status === 401) {
-      window.location.href = "/login";
-      logout();
+      localStorage.setItem("isLogin", false);
+      localStorage.removeItem("user");
     }
     return Promise.reject(error);
   }
