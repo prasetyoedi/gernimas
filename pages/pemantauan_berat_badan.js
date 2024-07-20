@@ -156,48 +156,28 @@ const PemantauanBeratBadan = () => {
                 </div>
                 <div className="w-full max-w-[1281px] rounded-[20px] bg-[rgba(255,140,157,0.20)] p-5">
                     <p className="text-[#E5677A] text-[22px] font-bold">
-                        Tahukah, Bunda? Berikut Merupakan Informasi Mengenai Indeks Massa Tubuh (IMT)
+                        Tahukah, Bunda? Berikut Merupakan Informasi Mengenai Berat Badan Bunda!
                     </p>
                 </div>
-                <div className="w-full max-w-[1281px] rounded-[20px] bg-white p-5 overflow-x-auto">
-                    <table className="rounded-[20px] overflow-hidden min-w-full bg-white shadow-lg ">
-                        <thead>
-                            <tr className="bg-[#FFE3E7]">
-                                <th className="py-4 px-6 text-left">Keterangan</th>
-                                <th className="py-4 px-6 text-left">IMT (Kg/m²)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="py-4 px-6 border-t">Underweight</td>
-                                <td className="py-4 px-6 border-t">&lt;18,5</td>
-                            </tr>
-                            <tr className="bg-[#FFF5F7]">
-                                <td className="py-4 px-6 border-t">Normal</td>
-                                <td className="py-4 px-6 border-t">18,5 - 22,9</td>
-                            </tr>
-                            <tr>
-                                <td className="py-4 px-6 border-t">Overweight</td>
-                                <td className="py-4 px-6 border-t">23 - 24,9</td>
-                            </tr>
-                            <tr className="bg-[#FFF5F7]">
-                                <td className="py-4 px-6 border-t">Obesitas Tingkat I</td>
-                                <td className="py-4 px-6 border-t">25 - 29,9</td>
-                            </tr>
-                            <tr>
-                                <td className="py-4 px-6 border-t">Obesitas Tingkat II</td>
-                                <td className="py-4 px-6 border-t">&gt;30</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <Link href='/artikel' passHref>
-                    <div className='cursor-pointer flex justify-center items-center'>
-                        <div className="text-[14px] bg-[#E5677A] text-white py-4 px-12 rounded-[10px]">
-                            Baca Artikel
+                <div class="w-full max-w-[1281px] bg-white mb-10">
+                    <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 md:gap-60">
+                        <div class="flex flex-col items-center gap-8 md:gap-10">
+                            <div class="w-full md:w-104 h-auto p-10 border border-gray-300 rounded-lg bg-opacity-10 bg-red-200 shadow-md flex justify-center items-center mb-4 md:mb-0">
+                                <p class="text-center text-lg font-semibold text-red-500">
+                                    Peningkatan berat badan selama kehamilan tergantung dari berat badan sebelum hamil. Perhitungan BMI menggunakan ukuran berat badan dan tinggi badan untuk memperkirakan jumlah total lemak dalam tubuh.
+                                </p>
+                            </div>
+                            <div class="w-full md:w-104 h-auto p-10 border border-gray-300 rounded-lg bg-opacity-10 bg-red-200 shadow-md flex justify-center items-center">
+                                <p class="text-center text-lg font-semibold text-red-500">
+                                    Peningkatan berat badan selama kehamilan tergantung dari berat badan sebelum hamil. Perhitungan BMI menggunakan ukuran berat badan dan tinggi badan untuk memperkirakan jumlah total lemak dalam tubuh.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full md:w-96 mt-4 md:mt-0">
+                            <img src="/assets/images/tracking/doctor.png" alt="Descriptive Alt Text" class="w-full h-auto rounded-lg"/>
                         </div>
                     </div>
-                </Link>
+                </div>
             </div>
             <Footer />
         </div>

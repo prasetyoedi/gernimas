@@ -142,10 +142,10 @@ const Navbar = () => {
               ) : (
                 <>
                   <li>
-                    <Link href="/notification" passHref>
+                    <Link href="/notifikasi" passHref>
                       <div
                         className={`w-[116px] h-6 pt-2 mb-3 ${
-                          isActive("/notification")
+                          isActive("/notifikasi")
                             ? "text-red-400 font-bold"
                             : "text-red-400/80"
                         } text-base hover:text-red-400 transition duration-300 ease-in-out cursor-pointer`}
