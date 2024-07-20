@@ -4,44 +4,6 @@ import Footer from "../components/Footer";
 import ArtikelCard from "../components/ArtikelCard";
 import { getArticles } from "./api/article/get_articles";
 
-const artikelData = [
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "IBU HAMIL",
-    title: "Tips Kehamilan Sehat: Nutrisi dan Gizi yang Tepat untuk Ibu Hamil",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "KESEHATAN ANAK",
-    title: "Pentingnya Vaksinasi untuk Anak",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "GIZI SEHAT",
-    title: "Makanan Sehat untuk Menjaga Berat Badan Ideal",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "KESEHATAN IBU",
-    title: "Perawatan Pasca Melahirkan yang Tepat",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "PENGOBATAN ALAMI",
-    title: "Manfaat dan Cara Menggunakan Daun Sirsak untuk Kesehatan",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "KULIT SEHAT",
-    title: "Tips Sederhana Merawat Kulit Wajah Agar Tetap Sehat",
-  },
-  {
-    imageUrl: "/assets/images/article.png",
-    category: "KESEHATAN ANAK",
-    title: "Tips Sederhana Merawat Anak agar Tumbuh Sehat dan Cerdas",
-  },
-];
-
 const Artikel = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [articles, setArticles] = useState([]);
@@ -57,8 +19,8 @@ const Artikel = () => {
 
   const filteredArtikelData = articles.filter(
     (artikel) =>
-      artikel.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      artikel.title.toLowerCase().includes(searchTerm.toLowerCase())
+      artikel.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      artikel.judul.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -91,7 +53,7 @@ const Artikel = () => {
               {filteredArtikelData.slice(0, 3).map((artikel, index) => (
                 <ArtikelCard
                   key={index}
-                  id={index}
+                  id={artikel.id}
                   imageUrl={artikel.image}
                   category={artikel.author}
                   title={artikel.judul}
@@ -102,7 +64,7 @@ const Artikel = () => {
               {filteredArtikelData.slice(3).map((artikel, index) => (
                 <ArtikelCard
                   key={index}
-                  id={index}
+                  id={artikel.id}
                   imageUrl={artikel.image}
                   category={artikel.author}
                   title={artikel.judul}

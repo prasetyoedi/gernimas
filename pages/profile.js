@@ -38,6 +38,17 @@ const Profile = () => {
     updateProfile(formData);
   };
 
+  const keys = [
+    "nama_lengkap",
+    "nama_panggilan",
+    "email",
+    "tempat_lahir",
+    "tanggal_lahir",
+    "alamat",
+    "no_hp",
+    "pendidikan",
+  ];
+
   const leftInputs = [
     "nama_lengkap",
     "nama_panggilan",
@@ -72,33 +83,35 @@ const Profile = () => {
           <div className="flex flex-col w-full">
             <div className="border border-red-400 p-8 rounded-xl">
               <form className="space-y-4">
-                {Object.keys(formData).map((key) => (
-                  <div key={key}>
-                    <label className="block text-[18px] font-medium text-red-400 capitalize">
-                      {key
-                        .replace(/_/g, " ")
-                        .replace(/([A-Z])/g, " $1")
-                        .replace(/\s+/g, " ")}
-                    </label>
-                    {key === "jenis_kelamin" ? (
-                      <input
-                        type="text"
-                        value={
-                          formData[key] === "P" ? "Perempuan" : "Laki-laki"
-                        }
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                        readOnly
-                      />
-                    ) : (
-                      <input
-                        type="text"
-                        value={formData[key]}
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                        readOnly
-                      />
-                    )}
-                  </div>
-                ))}
+                {Object.keys(formData)
+                  .filter((data) => keys.includes(data))
+                  .map((key) => (
+                    <div key={key}>
+                      <label className="block text-[18px] font-medium text-red-400 capitalize">
+                        {key
+                          .replace(/_/g, " ")
+                          .replace(/([A-Z])/g, " $1")
+                          .replace(/\s+/g, " ")}
+                      </label>
+                      {key === "jenis_kelamin" ? (
+                        <input
+                          type="text"
+                          value={
+                            formData[key] === "P" ? "Perempuan" : "Laki-laki"
+                          }
+                          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+                          readOnly
+                        />
+                      ) : (
+                        <input
+                          type="text"
+                          value={formData[key]}
+                          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+                          readOnly
+                        />
+                      )}
+                    </div>
+                  ))}
               </form>
             </div>
           </div>

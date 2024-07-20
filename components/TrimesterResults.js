@@ -55,7 +55,7 @@ const TrimesterResults = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
           {results[selectedTrimester].map((result, index) => (
-            <Link href="/detail_riwayat_periksa">
+            <Link key={index} href="/detail_riwayat_periksa">
               <div
                 key={index}
                 className="bg-pink-50 border border-gray-200 shadow-lg rounded-lg overflow-hidden m-5 cursor-pointer hover:scale-110 hover:shadow-lg transition-transform duration-1000 p-4"

@@ -1,12 +1,11 @@
 import React, { createContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { getProfile } from "../api/profile/get_profile";
+import { getProfile } from "../pages/api/profile/get_profile";
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
-const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [isLogin, setIsLogin] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -15,10 +14,7 @@ const AuthProvider = ({ children }) => {
       if (router.pathname != "/") {
         getProfile().then((e) => {
           if (!e?.data?.data) {
-            router.push("/");
-            setIsLogin(true);
-          } else {
-            setIsLogin(true);
+            router.push("/login");
           }
         });
       }
@@ -45,5 +41,3 @@ const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-export { AuthContext, AuthProvider };

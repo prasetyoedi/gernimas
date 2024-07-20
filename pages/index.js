@@ -5,8 +5,8 @@ import ArtikelCard from "../components/ArtikelCard";
 import LayananCard from "../components/LayananCard";
 import Link from "next/link";
 import { useContext, useState, useEffect } from "react";
-import { AuthContext } from "./context/auth_context";
 import { getArticles } from "./api/article/get_articles";
+import { AuthContext } from "@/context/auth_context";
 
 const HomeUser = () => {
   const [articles, setArticles] = useState([]);
@@ -168,9 +168,9 @@ const HomeUser = () => {
             <ArtikelCard
               key={index}
               id={artikel.id}
-              imageUrl={artikel.imageUrl}
-              category={artikel.category}
-              title={artikel.title}
+              imageUrl={artikel.image}
+              category={artikel.author}
+              title={artikel.judul}
             />
           ))}
         </div>

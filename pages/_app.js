@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { Poppins } from "next/font/google";
 import React from "react";
 import App from "next/app";
-import { AuthProvider } from "./context/auth_context";
+import { AuthProvider } from "@/context/auth_context";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
