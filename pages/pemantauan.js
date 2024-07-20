@@ -95,13 +95,11 @@ const Pemantauan = () => {
             category="(Overweight)"
           />
           <PemantauanIbuHamilCard
-            href="/pemantauan_lingkar_lengan"
             week="Lingkar Lengan"
             value="23.5"
             unit="cm"
           />
           <PemantauanIbuHamilCard
-            href="/pemantauan_tinggi_badan"
             week="Tinggi Badan"
             value="165"
             unit="cm"
