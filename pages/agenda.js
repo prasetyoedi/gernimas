@@ -5,85 +5,22 @@ import { getAgendas } from "./api/agenda/get_agendas";
 
 const Agenda = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [agendas, setAgendas] = useState([]);
 
-  const agendaData = [
-    {
-      no: 1,
-      date: "03/01/2024",
-      name: "Pemeriksaan Rutin Minggu 1",
-      time: "10:00 AM",
-      place: "RSA UGM",
-      address:
-        "Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291",
-      status: "Done",
-    },
-    {
-      no: 2,
-      date: "10/01/2024",
-      name: "Pemeriksaan Rutin Minggu 2",
-      time: "10:00 AM",
-      place: "RSA UGM",
-      address:
-        "Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291",
-      status: "To Do",
-    },
-    {
-      no: 3,
-      date: "17/01/2024",
-      name: "Pemeriksaan Rutin Minggu 3",
-      time: "10:00 AM",
-      place: "RSA UGM",
-      address:
-        "Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291",
-      status: "To Do",
-    },
-    {
-      no: 4,
-      date: "24/01/2024",
-      name: "Pemeriksaan Rutin Minggu 4",
-      time: "13:00 PM",
-      place: "RSA UGM",
-      address:
-        "Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291",
-      status: "To Do",
-    },
-    {
-      no: 5,
-      date: "24/01/2024",
-      name: "Pemeriksaan Rutin Minggu 1",
-      time: "13:00 PM",
-      place: "RSA UGM",
-      address:
-        "Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291",
-      status: "To Do",
-    },
-    {
-      no: 6,
-      date: "24/01/2024",
-      name: "Pemeriksaan Rutin Minggu 2",
-      time: "13:00 PM",
-      place: "RSA UGM",
-      address:
-        "Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291",
-      status: "To Do",
-    },
-  ];
-
-  const filteredAgendaData = agendaData.filter((item) => {
+  const filteredAgendaData = agendas.filter((item) => {
     const searchLower = searchTerm.toLowerCase();
     return (
-      item.date.toLowerCase().includes(searchLower) ||
-      item.name.toLowerCase().includes(searchLower) ||
-      item.time.toLowerCase().includes(searchLower) ||
-      item.place.toLowerCase().includes(searchLower) ||
-      item.address.toLowerCase().includes(searchLower)
+      item.tanggal.toLowerCase().includes(searchLower) ||
+      item.judul.toLowerCase().includes(searchLower) ||
+      item.waktu.toLowerCase().includes(searchLower) ||
+      item.lokasi.toLowerCase().includes(searchLower) ||
+      item.alamat.toLowerCase().includes(searchLower)
     );
   });
 
   useEffect(() => {
     getAgendas().then((res) => {
-      console.log(res.data);
+      setAgendas(res.data ?? []);
     });
   }, []);
 
@@ -123,7 +60,7 @@ const Agenda = () => {
             <input
               type="text"
               className="w-full border border-red-400 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-pink-200"
-              placeholder="Cari artikel sesuai dengan pilihan Bunda!"
+              placeholder="Cari agenda Bunda!"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -157,34 +94,37 @@ const Agenda = () => {
                   </thead>
                   <tbody>
                     {filteredAgendaData.map((item) => (
-                      <tr key={item.no} className="hover:bg-pink-50">
+                      <tr
+                        key={filteredAgendaData.indexOf(item) + 1}
+                        className="hover:bg-pink-50"
+                      >
                         <td className="px-4 py-2 border-b border-pink-200">
-                          {item.no}
+                          {filteredAgendaData.indexOf(item) + 1}
                         </td>
                         <td className="px-4 py-2 border-b border-pink-200">
-                          {item.date}
+                          {item.tanggal}
                         </td>
                         <td className="px-4 py-2 border-b border-pink-200">
-                          {item.name}
+                          {item.judul}
                         </td>
                         <td className="px-4 py-2 border-b border-pink-200">
-                          {item.time}
+                          {item.waktu}
                         </td>
                         <td className="px-4 py-2 border-b border-pink-200">
-                          {item.place}
+                          {item.tempat}
                         </td>
                         <td className="px-4 py-2 border-b border-pink-200">
-                          {item.address}
+                          {item.alamat}
                         </td>
                         <td className="px-4 py-2 border-b border-pink-200">
                           <span
                             className={`px-3 py-1 whitespace-nowrap inline-flex text-sm leading-5 font-semibold rounded-full ${
-                              item.status === "Done"
+                              item.status === 1
                                 ? "bg-green-100 text-green-800"
                                 : "bg-red-100 text-red-800"
                             }`}
                           >
-                            {item.status}
+                            {item.status === 1 ? "Done" : "To Do"}
                           </span>
                         </td>
                       </tr>
