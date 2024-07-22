@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { getArticles } from "@/pages/api/article/get_articles";
+import { useRouter } from "next/router";
 
 const GambarArtikelLainnya = ({ imageSrc, content, id }) => {
   return (
@@ -32,12 +33,13 @@ const GambarArtikelLainnya = ({ imageSrc, content, id }) => {
 
 const ArtikelLainnya = () => {
   const [articles, setArticles] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     getArticles().then((res) => {
       if (res.data) {
         const data = res.data;
-        setArticles(data);
+        setArticles(data.filter((o) => o.id != router.query.id));
       }
     });
   }, []);
