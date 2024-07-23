@@ -7,12 +7,12 @@ const Agenda = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
 
     const agendaData = [
-        { no: 1, date: '03/01/2024', name: 'Pemeriksaan Rutin Minggu 1', time: '10:00 AM', place: 'RSA UGM', address: 'Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291', status: 'Done' },
-        { no: 2, date: '10/01/2024', name: 'Pemeriksaan Rutin Minggu 2', time: '10:00 AM', place: 'RSA UGM', address: 'Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291', status: 'To Do' },
-        { no: 3, date: '17/01/2024', name: 'Pemeriksaan Rutin Minggu 3', time: '10:00 AM', place: 'RSA UGM', address: 'Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291', status: 'To Do' },
-        { no: 4, date: '24/01/2024', name: 'Pemeriksaan Rutin Minggu 4', time: '13:00 PM', place: 'RSA UGM', address: 'Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291', status: 'To Do' },
-        { no: 5, date: '24/01/2024', name: 'Pemeriksaan Rutin Minggu 1', time: '13:00 PM', place: 'RSA UGM', address: 'Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291', status: 'To Do' },
-        { no: 6, date: '24/01/2024', name: 'Pemeriksaan Rutin Minggu 2', time: '13:00 PM', place: 'RSA UGM', address: 'Jl. Kabupaten, Kranggan I, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55291', status: 'To Do' },
+        { no: 1, date: '03/01/2024', name: 'Pemeriksaan Rutin Minggu 1', time: '10:00 AM', faskes1: 'RSA UGM', faskes2: 'Panti Rapih', status: 'Done' },
+        { no: 2, date: '10/01/2024', name: 'Pemeriksaan Rutin Minggu 2', time: '10:00 AM', faskes1: 'RSA UGM', faskes2: 'Panti Rapih', status: 'To Do' },
+        { no: 3, date: '17/01/2024', name: 'Pemeriksaan Rutin Minggu 3', time: '10:00 AM', faskes1: 'RSA UGM', faskes2: 'Panti Rapih', status: 'To Do' },
+        { no: 4, date: '24/01/2024', name: 'Pemeriksaan Rutin Minggu 4', time: '13:00 PM', faskes1: 'RSA UGM', faskes2: 'Panti Rapih', status: 'To Do' },
+        { no: 5, date: '24/01/2024', name: 'Pemeriksaan Rutin Minggu 1', time: '13:00 PM', faskes1: 'RSA UGM', faskes2: 'Panti Rapih', status: 'To Do' },
+        { no: 6, date: '24/01/2024', name: 'Pemeriksaan Rutin Minggu 2', time: '13:00 PM', faskes1: 'RSA UGM', faskes2: 'Panti Rapih', status: 'To Do' },
     ];
 
     const filteredAgendaData = agendaData.filter(item => {
@@ -21,8 +21,8 @@ const Agenda = () => {
             item.date.toLowerCase().includes(searchLower) ||
             item.name.toLowerCase().includes(searchLower) ||
             item.time.toLowerCase().includes(searchLower) ||
-            item.place.toLowerCase().includes(searchLower) ||
-            item.address.toLowerCase().includes(searchLower)
+            item.faskes1.toLowerCase().includes(searchLower) ||
+            item.faskes2.toLowerCase().includes(searchLower)
         );
     });
 
@@ -50,7 +50,7 @@ const Agenda = () => {
                         <input
                             type="text"
                             className="w-full border border-red-400 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-pink-200"
-                            placeholder="Cari artikel sesuai dengan pilihan Bunda!"
+                            faskes1holder="Cari artikel sesuai dengan pilihan Bunda!"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
@@ -65,8 +65,8 @@ const Agenda = () => {
                                             <th className="px-4 py-2 border-b border-pink-200">Tanggal</th>
                                             <th className="px-4 py-2 border-b border-pink-200">Nama Acara</th>
                                             <th className="px-4 py-2 border-b border-pink-200">Pukul</th>
-                                            <th className="px-4 py-2 border-b border-pink-200">Tempat</th>
-                                            <th className="px-4 py-2 border-b border-pink-200">Alamat</th>
+                                            <th className="px-4 py-2 border-b border-pink-200">Faskes 1</th>
+                                            <th className="px-4 py-2 border-b border-pink-200">Faskes Rujukan</th>
                                             <th className="px-4 py-2 border-b border-pink-200">Status</th>
                                         </tr>
                                     </thead>
@@ -77,8 +77,8 @@ const Agenda = () => {
                                                 <td className="px-4 py-2 border-b border-pink-200">{item.date}</td>
                                                 <td className="px-4 py-2 border-b border-pink-200">{item.name}</td>
                                                 <td className="px-4 py-2 border-b border-pink-200">{item.time}</td>
-                                                <td className="px-4 py-2 border-b border-pink-200">{item.place}</td>
-                                                <td className="px-4 py-2 border-b border-pink-200">{item.address}</td>
+                                                <td className="px-4 py-2 border-b border-pink-200">{item.faskes1}</td>
+                                                <td className="px-4 py-2 border-b border-pink-200">{item.faskes2}</td>
                                                 <td className="px-4 py-2 border-b border-pink-200">
                                                     <span className={`px-3 py-1 whitespace-nowrap inline-flex text-sm leading-5 font-semibold rounded-full ${
                                                         item.status === 'Done' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'

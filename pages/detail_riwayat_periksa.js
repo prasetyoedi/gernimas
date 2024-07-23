@@ -14,6 +14,8 @@ const examinationData = [
     { no: 9, name: "Riwayat Penyakit Keluarga", result: "Melahirkan bayi kembar, hipertensi, jantung" },
     { no: 10, name: "Riwayat Penyakit Pribadi", result: "Anemia" },
     { no: 11, name: "Pemeriksaan Selanjutnya", result: "20 Januari 2024" },
+    { no: 12, name: "Riwayat Penyakit Pribadi", result: "Gatal-gatal" },
+    { no: 13, name: "Riwayat Penyakit Keluarga", result: "Tidak Ada" },
 ];
 
 const DetailRiwayatPeriksa = () => {
