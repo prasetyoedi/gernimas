@@ -64,6 +64,14 @@ const Agenda = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
+            <button className="bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-lg flex items-center">
+              Cari
+              <img
+                src="/assets/images/article/search.svg"
+                alt="Cari"
+                className="w-4 h-4 ml-2"
+              />
+            </button>
           </div>
           <div className="rounded-2xl w-full bg-white p-4 shadow">
             <div className="overflow-y-auto max-h-[400px]">

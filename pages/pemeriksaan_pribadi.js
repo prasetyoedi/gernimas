@@ -54,11 +54,11 @@ const PemeriksaanPribadi = () => {
   const filteredData = datas.filter((examination) => {
     const searchLower = searchTerm.toLocaleLowerCase();
     return (
-      examination.tanggal.toLowerCase().includes(searchLower) ||
-      examination.berat_badan.toLowerCase().includes(searchLower) ||
-      examination.tinggi_badan.toLowerCase().includes(searchLower) ||
-      examination.lingkar_lengan_atas.toLowerCase().includes(searchLower) ||
-      examination.keluhan.toLowerCase().includes(searchLower)
+      examination?.tanggal?.toLowerCase().includes(searchLower) ||
+      examination?.berat_badan?.toLowerCase().includes(searchLower) ||
+      examination?.tinggi_badan?.toLowerCase().includes(searchLower) ||
+      examination?.lingkar_lengan_atas?.toLowerCase().includes(searchLower) ||
+      examination?.keluhan?.toLowerCase().includes(searchLower)
     );
   });
 
@@ -107,7 +107,7 @@ const PemeriksaanPribadi = () => {
             <input
               type="text"
               className="w-full border border-red-400 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-pink-200"
-              placeholder="Cari data pemeriksaan mandiri Bunda Bunda!"
+              placeholder="Cari data pemeriksaan mandiri Bunda!"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -186,9 +186,11 @@ const PemeriksaanPribadi = () => {
             </h2>
             <div className="w-full h-[2px] bg-red-400 mb-4"></div>
             <div className="mb-4">
-              <label className="block text-red-400 mb-2">Berat Badan</label>
+              <label className="block text-red-400 font-bold mb-2">
+                Berat Badan (kg)
+              </label>
               <input
-                type="text"
+                type="number"
                 name="weight"
                 value={newData.weight}
                 onChange={handleInputChange}
@@ -196,9 +198,11 @@ const PemeriksaanPribadi = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-red-400 mb-2">Tinggi Badan</label>
+              <label className="block text-red-400 font-bold mb-2">
+                Tinggi Badan (cm)
+              </label>
               <input
-                type="text"
+                type="number"
                 name="height"
                 value={newData.height}
                 onChange={handleInputChange}
@@ -206,9 +210,11 @@ const PemeriksaanPribadi = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-red-400 mb-2">Lingkar Lengan</label>
+              <label className="block text-red-400 font-bold mb-2">
+                Lingkar Lengan (cm)
+              </label>
               <input
-                type="text"
+                type="number"
                 name="armCircumference"
                 value={newData.armCircumference}
                 onChange={handleInputChange}
@@ -216,18 +222,21 @@ const PemeriksaanPribadi = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-red-400 mb-2">Catatan Harian</label>
+              <label className="block text-red-400 font-bold mb-2">
+                Catatan Harian
+              </label>
               <textarea
                 name="notes"
                 value={newData.notes}
                 onChange={handleInputChange}
                 className="w-full border border-red-400 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-pink-200"
+                rows="4"
               />
             </div>
-            <div className="flex justify-end space-x-4">
+            <div className="flex justify-end">
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-lg"
+                className="bg-red-400 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-lg mr-2"
               >
                 Batal
               </button>
