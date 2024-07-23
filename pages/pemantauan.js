@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { getPemeriksaan } from "./api/pemeriksaan/get_pemeriksaan";
 import { getLastPemeriksaan } from "@/utils/get_last_pemeriksaan";
 import { getWeightCategory } from "@/utils/get_weight_category";
+import { getKehamilan } from "./api/kehamilan/get_kehamilan";
 
 const pemantauanJaninData = [
   {
@@ -67,12 +68,19 @@ const pemantauanJaninData = [
 
 const Pemantauan = () => {
   const [dataPemeriksaan, setDataPemeriksaan] = useState({});
+  const [dataKehamilan, setDataKehamilan] = useState({});
   useEffect(() => {
     getPemeriksaan().then((res) => {
       const data = res.data;
       if (data) {
         setDataPemeriksaan(getLastPemeriksaan(data));
         console.log(getLastPemeriksaan(data));
+      }
+    });
+    getKehamilan().then((res) => {
+      const data = res.data;
+      if (data) {
+        setDataKehamilan(data);
       }
     });
   }, []);
@@ -83,11 +91,9 @@ const Pemantauan = () => {
       <div className="flex flex-col justify-center items-center gap-16 self-stretch bg-white p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 mt-6">
           <PemantauanIbuHamilCard
-            href={`/pemantauan_usia_kandungan?usia=${
-              dataPemeriksaan.usia_kandungan ?? 4
-            }`}
+            href={`/pemantauan_usia_kandungan`}
             title="Usia Kandungan"
-            value={dataPemeriksaan.usia_kandungan ?? "0"}
+            value={dataKehamilan.usia ?? "0"}
             unit="Minggu"
           />
           <PemantauanIbuHamilCard
@@ -95,7 +101,7 @@ const Pemantauan = () => {
             title="Berat Badan"
             value={dataPemeriksaan.berat_badan ?? "0"}
             unit="kg"
-            category={getWeightCategory(dataPemeriksaan.berat_badan)}
+            category={`(${getWeightCategory(dataPemeriksaan.berat_badan)})`}
           />
           <PemantauanIbuHamilCard
             title="Lingkar Lengan"

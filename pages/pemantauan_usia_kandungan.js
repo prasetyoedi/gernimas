@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
+import { getKehamilan } from "./api/kehamilan/get_kehamilan";
+import { getClosestWeek } from "@/utils/get_closest_week";
 
 const PemantauanUsiaKandungan = () => {
-  const router = useRouter();
-  const { week } = router.query.usia;
-
   const fetalDevelopmentData = [
     {
       week: "4 Minggu",
@@ -72,10 +71,18 @@ const PemantauanUsiaKandungan = () => {
     },
   ];
 
-  const currentData =
-    fetalDevelopmentData.find((data) => data.week === week) ||
-    fetalDevelopmentData[0];
+  const [currentData, setCurrentData] = useState();
 
+  useEffect(() => {
+    getKehamilan().then((res) => {
+      const data = res.data;
+      if (data) {
+        setCurrentData(
+          getClosestWeek(`${data.usia ?? 4} Minggu`, fetalDevelopmentData)
+        );
+      }
+    });
+  }, []);
   return (
     <div>
       <Navbar />
@@ -89,18 +96,18 @@ const PemantauanUsiaKandungan = () => {
           <div className="flex flex-col items-center gap-4 w-full sm:w-[50%] rounded-[22px] m-2 border-[2px] border-[#E5677A]">
             <div className="w-auto h-auto sm:w-auto sm:h-[300px] bg-cover bg-center bg-no-repeat rounded-t-2xl p-2">
               <img
-                src={currentData.image}
-                alt="Deskripsi gambar"
+                src={currentData?.image}
+                alt={currentData ? currentData.week : "Loading..."}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="flex flex-col items-center gap-4 p-4 sm:p-6 w-full bg-[rgba(229,103,122,0.70)] rounded-b-2xl ">
               <p className="text-[18px] sm:text-[22px] font-bold text-white">
-                {currentData.week}
+                {currentData?.week ?? "Loading..."}
               </p>
               <div className="w-full h-[2px] bg-[rgba(81,75,75,0.14)]"></div>
               <p className="text-[14px] font-bold text-white">
-                Panjang Fetus: {currentData.length}
+                Panjang Fetus: {currentData?.length ?? "Loading..."}
               </p>
             </div>
           </div>
@@ -111,7 +118,7 @@ const PemantauanUsiaKandungan = () => {
               </p>
             </div>
             <p className="p-6 text-[18px] font-semibold leading-[30px] text-[#E5677A]">
-              {currentData.organDevelopment}
+              {currentData?.organDevelopment ?? "Loading..."}
             </p>
           </div>
         </div>
