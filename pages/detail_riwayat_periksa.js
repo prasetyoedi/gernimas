@@ -4,38 +4,6 @@ import Footer from "@/components/Footer";
 import { getPemeriksaan } from "./api/pemeriksaan/get_pemeriksaan";
 import { useRouter } from "next/router";
 
-<<<<<<< HEAD
-const examinationData = [
-    { no: 1, name: "Tinggi Badan", result: "160 cm" },
-    { no: 2, name: "Berat Badan", result: "50 kg" },
-    { no: 3, name: "Lingkar Lengan Atas", result: "22 cm" },
-    { no: 4, name: "Letak & Denyut Jantung Bayi", result: "160 x/menit" },
-    { no: 5, name: "Hemoglobin", result: "11 g/dL" },
-    { no: 6, name: "Gula Darah", result: "95 mg/dL" },
-    { no: 7, name: "Tinggi Rahim", result: "150 cm" },
-    { no: 8, name: "Tekanan Darah", result: "120/80 mmhg" },
-    { no: 9, name: "Riwayat Penyakit Keluarga", result: "Melahirkan bayi kembar, hipertensi, jantung" },
-    { no: 10, name: "Riwayat Penyakit Pribadi", result: "Anemia" },
-    { no: 11, name: "Pemeriksaan Selanjutnya", result: "20 Januari 2024" },
-    { no: 12, name: "Riwayat Penyakit Pribadi", result: "Gatal-gatal" },
-    { no: 13, name: "Riwayat Penyakit Keluarga", result: "Tidak Ada" },
-];
-=======
-// const examinationData = [
-//   "Tinggi Badan",
-//   "Berat Badan",
-//   "Lingkar Lengan Atas",
-//   "Letak & Denyut Jantung Bayi",
-//   "Hemoglobin",
-//   "Gula Darah",
-//   "Tinggi Rahim",
-//   "Tekanan Darah",
-//   "Riwayat Penyakit Keluarga",
-//   "Riwayat Penyakit Pribadi",
-//   "Pemeriksaan Selanjutnya",
-// ];
->>>>>>> d542d96c13dc0e1b70fb479f90416e0ca45837b7
-
 const DetailRiwayatPeriksa = () => {
   const [trimester, setTrimester] = useState("");
   const [result, setResult] = useState({});
@@ -104,7 +72,7 @@ const DetailRiwayatPeriksa = () => {
                   Nama Dokter
                 </p>
                 <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
-                  {result.dokter ?? ""}
+                  {result.dokter?.name ?? ""}
                 </p>
               </div>
               <div>
