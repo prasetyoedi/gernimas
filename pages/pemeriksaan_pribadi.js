@@ -4,65 +4,6 @@ import Footer from "../components/Footer";
 import { getPemeriksaanMandiri } from "./api/pemeriksaan/get_pemeriksaan_mandiri";
 import { createPemeriksaanMandiri } from "./api/pemeriksaan/post_pemeriksaan_mandiri";
 
-const examinationData = [
-  {
-    no: 1,
-    date: "2023-07-01",
-    weight: "50 kg",
-    height: "160 cm",
-    armCircumference: "22 cm",
-    notes: "Merasa sehat, tidak ada keluhan",
-  },
-  {
-    no: 2,
-    date: "2023-07-08",
-    weight: "51 kg",
-    height: "160 cm",
-    armCircumference: "23 cm",
-    notes: "Sedikit pusing di pagi hari",
-  },
-  {
-    no: 3,
-    date: "2023-07-15",
-    weight: "52 kg",
-    height: "160 cm",
-    armCircumference: "23 cm",
-    notes: "Nafsu makan meningkat",
-  },
-  {
-    no: 4,
-    date: "2023-07-22",
-    weight: "53 kg",
-    height: "160 cm",
-    armCircumference: "24 cm",
-    notes: "Merasa lelah di sore hari",
-  },
-  {
-    no: 2,
-    date: "2023-07-08",
-    weight: "51 kg",
-    height: "160 cm",
-    armCircumference: "23 cm",
-    notes: "Sedikit pusing di pagi hari",
-  },
-  {
-    no: 3,
-    date: "2023-07-15",
-    weight: "52 kg",
-    height: "160 cm",
-    armCircumference: "23 cm",
-    notes: "Nafsu makan meningkat",
-  },
-  {
-    no: 4,
-    date: "2023-07-22",
-    weight: "53 kg",
-    height: "160 cm",
-    armCircumference: "24 cm",
-    notes: "Merasa lelah di sore hari",
-  },
-];
-
 const PemeriksaanPribadi = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -72,11 +13,14 @@ const PemeriksaanPribadi = () => {
     armCircumference: "",
     notes: "",
   });
-  const [data, setData] = useState(examinationData);
+  const [datas, setDatas] = useState([]);
 
   useEffect(() => {
     getPemeriksaanMandiri().then((res) => {
-      console.log(res.data);
+      const data = res.data;
+      if (data) {
+        setDatas(data);
+      }
     });
   }, []);
 
@@ -86,35 +30,37 @@ const PemeriksaanPribadi = () => {
   };
 
   const handleSubmit = () => {
-    const newEntry = {
-      no: data.length + 1,
-      date: new Date().toISOString().split("T")[0],
-      weight: newData.weight,
-      height: newData.height,
-      armCircumference: newData.armCircumference,
-      notes: newData.notes,
-    };
-    setData([...data, newEntry]);
+    setDatas([
+      ...datas,
+      {
+        tinggi_badan: newData.height,
+        berat_badan: newData.weight,
+        lingkar_lengan_atas: newData.armCircumference,
+        keluhan: newData.notes,
+        tanggal: new Date().toISOString().split("T")[0],
+      },
+    ]);
     setIsModalOpen(false);
-    setNewData({ weight: "", height: "", armCircumference: "", notes: "" });
     const payload = {
       tinggi_badan: newData.height,
       berat_badan: newData.weight,
       lingkar_lengan: newData.armCircumference,
       keluhan: newData.notes,
-      tekanan_datah: "90/100",
     };
     createPemeriksaanMandiri(payload);
+    setNewData({ weight: "", height: "", armCircumference: "", notes: "" });
   };
 
-  const filteredData = data.filter(
-    (examination) =>
-      examination.date.includes(searchTerm) ||
-      examination.weight.includes(searchTerm) ||
-      examination.height.includes(searchTerm) ||
-      examination.armCircumference.includes(searchTerm) ||
-      examination.notes.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredData = datas.filter((examination) => {
+    const searchLower = searchTerm.toLocaleLowerCase();
+    return (
+      examination.tanggal.toLowerCase().includes(searchLower) ||
+      examination.berat_badan.toLowerCase().includes(searchLower) ||
+      examination.tinggi_badan.toLowerCase().includes(searchLower) ||
+      examination.lingkar_lengan_atas.toLowerCase().includes(searchLower) ||
+      examination.keluhan.toLowerCase().includes(searchLower)
+    );
+  });
 
   return (
     <div>
@@ -203,22 +149,22 @@ const PemeriksaanPribadi = () => {
                   {filteredData.map((examination, index) => (
                     <tr key={index} className="hover:bg-pink-50">
                       <td className="px-4 py-4 border-b border-pink-200">
-                        {examination.no}
+                        {index + 1}
                       </td>
                       <td className="px-4 py-4 border-b border-pink-200">
-                        {examination.date}
+                        {examination?.tanggal ?? ""}
                       </td>
                       <td className="px-4 py-4 border-b border-pink-200">
-                        {examination.weight}
+                        {examination?.berat_badan ?? ""}
                       </td>
                       <td className="px-4 py-4 border-b border-pink-200">
-                        {examination.height}
+                        {examination?.tinggi_badan ?? ""}
                       </td>
                       <td className="px-4 py-4 border-b border-pink-200">
-                        {examination.armCircumference}
+                        {examination?.lingkar_lengan_atas ?? ""}
                       </td>
                       <td className="px-4 py-4 border-b border-pink-200">
-                        {examination.notes}
+                        {examination?.keluhan ?? ""}
                       </td>
                     </tr>
                   ))}
