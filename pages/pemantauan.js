@@ -73,7 +73,10 @@ const Pemantauan = () => {
   // "keluhan",
   useEffect(() => {
     getPemeriksaanMandiri().then((res) => {
-      console.log(res.data);
+      const data = res.data;
+      if (data) {
+        setDataPemeriksaan(data);
+      }
     });
   }, []);
   return (
@@ -82,26 +85,28 @@ const Pemantauan = () => {
       <div className="flex flex-col justify-center items-center gap-16 self-stretch bg-white p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 mt-6">
           <PemantauanIbuHamilCard
-            href="/pemantauan_usia_kandungan"
-            week="Usia Kandungan"
-            value="32"
+            href={`/pemantauan_usia_kandungan?usia=${
+              dataPemeriksaan.usia_kandungan ?? 4
+            }`}
+            title="Usia Kandungan"
+            value={dataPemeriksaan.usia_kandungan ?? "0"}
             unit="Minggu"
           />
           <PemantauanIbuHamilCard
             href="/pemantauan_berat_badan"
-            week="Berat Badan"
-            value="60"
+            title="Berat Badan"
+            value={dataPemeriksaan.berat_badan ?? "0"}
             unit="kg"
             category="(Overweight)"
           />
           <PemantauanIbuHamilCard
-            week="Lingkar Lengan"
-            value="23.5"
+            title="Lingkar Lengan"
+            value={dataPemeriksaan.lingkar_lengan ?? "0"}
             unit="cm"
           />
           <PemantauanIbuHamilCard
-            week="Tinggi Badan"
-            value="165"
+            title="Tinggi Badan"
+            value={dataPemeriksaan.tinggi_badan ?? "0"}
             unit="cm"
           />
         </div>
