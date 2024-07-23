@@ -4,7 +4,9 @@ import PemantauanIbuHamilCard from "../components/PemantauanIbuHamilCard";
 import PemantauanJaninCard from "../components/PemantauanJaninCard";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from "react";
-import { getPemeriksaanMandiri } from "./api/pemeriksaan/get_pemeriksaan_mandiri";
+import { getPemeriksaan } from "./api/pemeriksaan/get_pemeriksaan";
+import { getLastPemeriksaan } from "@/utils/get_last_pemeriksaan";
+import { getWeightCategory } from "@/utils/get_weight_category";
 
 const pemantauanJaninData = [
   {
@@ -65,20 +67,16 @@ const pemantauanJaninData = [
 
 const Pemantauan = () => {
   const [dataPemeriksaan, setDataPemeriksaan] = useState({});
-  // "pasien_id",
-  // "tanggal",
-  // "tinggi_badan",
-  // "berat_badan",
-  // "lingkar_lengan",
-  // "keluhan",
   useEffect(() => {
-    getPemeriksaanMandiri().then((res) => {
+    getPemeriksaan().then((res) => {
       const data = res.data;
       if (data) {
-        setDataPemeriksaan(data);
+        setDataPemeriksaan(getLastPemeriksaan(data));
+        console.log(getLastPemeriksaan(data));
       }
     });
   }, []);
+
   return (
     <div>
       <Navbar />
@@ -97,11 +95,11 @@ const Pemantauan = () => {
             title="Berat Badan"
             value={dataPemeriksaan.berat_badan ?? "0"}
             unit="kg"
-            category="(Overweight)"
+            category={getWeightCategory(dataPemeriksaan.berat_badan)}
           />
           <PemantauanIbuHamilCard
             title="Lingkar Lengan"
-            value={dataPemeriksaan.lingkar_lengan ?? "0"}
+            value={dataPemeriksaan.lingkar_lengan_atas ?? "0"}
             unit="cm"
           />
           <PemantauanIbuHamilCard
