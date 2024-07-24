@@ -2,15 +2,23 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import NotificationItem from "../components/NotificationItem";
-import { getNotifikasi } from "./api/notifikasi/get_notifikasi";
+import { getAgendas } from "./api/agenda/get_agendas";
+import { getKehamilan } from "./api/kehamilan/get_kehamilan";
 
 const Notifikasi = () => {
   const [notifications, setNotifications] = useState([]);
+  const [dataKehamilan, setDataKehamilan] = useState();
 
   useEffect(() => {
-    getNotifikasi().then((res) => {
+    getAgendas().then((res) => {
       if (res.data) {
-        setNotifications(res.data);
+        setNotifications(res.data.reverse());
+      }
+    });
+    getKehamilan().then((res) => {
+      const data = res.data;
+      if (data) {
+        setDataKehamilan(data);
       }
     });
   }, []);
@@ -39,7 +47,11 @@ const Notifikasi = () => {
         {notifications.length > 0 ? (
           <div className="flex flex-col w-full items-center gap-[10px] h-auto self-stretch rounded-[20px] bg-[rgba(255,140,157,0.20)] shadow-md backdrop-blur-[20px] mt-8 p-8">
             {notifications.map((notification, index) => (
-              <NotificationItem key={index} notification={notification} />
+              <NotificationItem
+                key={index}
+                notification={notification}
+                tanggalKehamilan={dataKehamilan?.mulai}
+              />
             ))}
           </div>
         ) : (

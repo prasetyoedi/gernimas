@@ -1,6 +1,7 @@
 import React from "react";
+import { calculateWeekGap } from "@/utils/calculate_week_gap";
 
-const NotificationItem = ({ notification }) => {
+const NotificationItem = ({ notification, tanggalKehamilan }) => {
   return (
     <>
       <div className="flex w-full justify-between items-center">
@@ -11,15 +12,16 @@ const NotificationItem = ({ notification }) => {
           />
           <div className="flex w-full md:w-[328px] flex-col items-start gap-[18px]">
             <p className="text-red-400 text-[18px] font-bold">
-              {notification.judul}
+              Pemeriksaan Ruti Minggu ke-{" "}
+              {calculateWeekGap(notification.tanggal, tanggalKehamilan)}
             </p>
             <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-[50px]">
               <p className="text-red-400 text-[16px]">{notification.tanggal}</p>
               <p className="text-red-400 text-[16px]">
-                {notification?.time ?? "-"}
+                {notification?.waktu ?? "-"}
               </p>
               <p className="text-red-400 text-[16px]">
-                {notification?.location ?? "-"}
+                {notification?.faskes_1 ?? "-"}
               </p>
             </div>
           </div>
