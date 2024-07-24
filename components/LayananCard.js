@@ -3,7 +3,7 @@ import Link from 'next/link';
 const LayananCard = ({ imageUrl, link, title, description }) => {
     return (
         <Link href={link}>
-            <div className="w-[198px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
+            <div className="w-[200px] h-[250px] shadow-xl bg-red-100 rounded-t-[40px] rounded-b-2xl cursor-pointer hover:scale-105 transition-transform duration-300">
                 <img
                     src={imageUrl}
                     alt={title}

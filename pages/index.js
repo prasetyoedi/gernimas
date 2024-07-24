@@ -87,12 +87,12 @@ const HomeUser = () => {
         </div>
       </div>
       {user && (
-        <div className="flex flex-col justify-center items-center p-20 bg-white">
+        <div className="flex flex-col justify-center items-center md:p-16 p-6 bg-white">
           <div className="text-center text-red-400 text-3xl font-bold mb-12">
             LAYANAN
           </div>
           <div className="w-full flex flex-col justify-start items-start gap-10">
-            <div className="flex flex-col justify-start items-start gap-2 rounded-[20px] bg-[rgba(255,140,157,0.20)] p-8">
+            <div className="flex w-full flex-col justify-start items-start gap-2 rounded-[20px] bg-[rgba(255,140,157,0.20)] p-8">
               <div className="text-red-400 text-3xl font-bold">
                 Hai Bunda, Tetap Sehat dan Terorganisir Selama Masa Kehamilan,
                 Ya!
@@ -104,7 +104,7 @@ const HomeUser = () => {
             </div>
             <div className="flex flex-wrap justify-center items-center gap-6">
               <div className="flex flex-col justify-start items-start gap-6 md:gap-10">
-                <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
+                <div className="flex justify-center items-center gap-6 md:gap-20 flex-wrap">
                   <LayananCard
                     imageUrl="/assets/images/services/agenda.png"
                     link="/agenda"
@@ -125,7 +125,7 @@ const HomeUser = () => {
                   />
                 </div>
 
-                <div className="flex justify-start items-start gap-6 md:gap-20 flex-wrap">
+                <div className="flex justify-center items-center gap-6 md:gap-20 flex-wrap">
                   <LayananCard
                     imageUrl="/assets/images/services/riwayat.png"
                     link="/riwayat_periksa"

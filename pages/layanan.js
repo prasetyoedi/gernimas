@@ -10,7 +10,7 @@ const Layanan = () => {
             <Navbar />
             <div className="flex flex-col justify-center items-center p-3 md:p-20 bg-white">
                 <div className="w-full flex flex-col justify-start items-start gap-10">
-                    <div className="flex flex-col justify-start items-start gap-2 rounded-[20px] bg-[rgba(255,140,157,0.20)] p-8">
+                    <div className="flex flex-col justify-start items-start gap-2 rounded-[20px] bg-[rgba(255,140,157,0.20)] p-8 ">
                         <div className="text-red-400 text-3xl font-bold">
                             Hai Bunda, Tetap Sehat dan Terorganisir Selama Masa Kehamilan, Ya!
                         </div>
@@ -26,8 +26,8 @@ const Layanan = () => {
                                 src="/assets/images/services/dokter.png"
                             />
                         </div>
-                        <div className="flex flex-col justify-start items-end gap-6 md:gap-10">
-                            <div className="flex justify-start items-end gap-6 md:gap-20 flex-wrap">
+                        <div className="flex flex-col justify-center items-end gap-6 md:gap-10">
+                            <div className="flex justify-center items-end gap-6 md:gap-20 flex-wrap">
                                 <LayananCard
                                     imageUrl="/assets/images/services/agenda.png"
                                     link="/agenda"
@@ -48,7 +48,7 @@ const Layanan = () => {
                                 />
                             </div>
 
-                            <div className="flex justify-start items-end gap-6 md:gap-20 flex-wrap">
+                            <div className="flex justify-center items-end gap-6 md:gap-20 flex-wrap">
                                 {/* <LayananCard
                                     imageUrl="/assets/images/services/faskes.png"
                                     link="/faskes-terdekat"
