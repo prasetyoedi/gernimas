@@ -13,13 +13,11 @@ export const AuthProvider = ({ children }) => {
     if (!userData) {
       getProfile().then((e) => {
         if (!e?.data?.data) {
-          if (router.pathname != "/" || router.pathname != "/login") {
-            router.replace("/");
-          }
+          logout();
         }
       });
     } else {
-      setUser(JSON.parse(userData));
+      login(JSON.parse(userData));
     }
   }, []);
 

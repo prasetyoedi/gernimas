@@ -23,9 +23,15 @@ apiClient.interceptors.request.use(
 apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response && error.response.status === 401) {
+    if (error.response?.status == 401) {
       localStorage.setItem("isLogin", false);
       localStorage.removeItem("user");
+      if (
+        !window.location.href.includes("/login") &&
+        window.location.href.split("/")[1]
+      ) {
+        window.window.location.href = "/";
+      }
     }
     return Promise.reject(error);
   }
