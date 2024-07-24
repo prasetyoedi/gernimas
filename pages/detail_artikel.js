@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 
 const DetailArtikel = () => {
   const [article, setArticle] = useState({});
-  // const [id, setId] = useState();
   const router = useRouter();
 
   useEffect(() => {
@@ -21,14 +20,14 @@ const DetailArtikel = () => {
     <div>
       <Navbar />
       <div className="flex flex-col md:flex-row justify-start items-start gap-4 md:gap-20 p-10 md:p-16 bg-white">
-        <div className="flex flex-col w-full md:w-[990px] h-auto md:h-[1028px] items-start space-y-[34px]">
+        <div className="flex flex-col w-full md:w-[990px] h-auto md:h-auto items-start space-y-[34px]">
           <p className="w-full md:w-[763px] text-[25px] font-bold leading-[30px] text-red-400">
             {article ? article.judul : "-"}
           </p>
           {article && (
             <img
               src={article.image}
-              className="w-full md:h-[293px] flex-shrink-0 rounded-lg"
+              className="w-full md:h-[450px] flex-shrink-0 rounded-lg"
               alt="Artikel Image"
             />
           )}
@@ -45,10 +44,12 @@ const DetailArtikel = () => {
           <p className="text-[16px] text-red-400 text-justify">
             {article && article.content}
           </p>
-          <p className="text-[16px] text-red-400 text-justify pt-2">
-            Referensi:{`\n`}
-            {article && article.reference}
-          </p>
+          <div className="bg-red-100 p-4 rounded-[8px]">
+            <p className="text-[18px] text-red-400 text-justify pt-2 font-bold">Referensi:</p>
+            <p className="text-[16px] text-red-400 text-justify pt-2">
+              {article && article.reference}
+            </p>
+          </div>
         </div>
         <ArtikelLainnya />
       </div>
