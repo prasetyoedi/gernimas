@@ -3,12 +3,13 @@ import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
 import Chart from "chart.js/auto";
 import { getPemeriksaanMandiri } from "./api/pemeriksaan/get_pemeriksaan_mandiri";
+import { extractNumberFromArray } from "@/utils/extract_number";
 
 const PemantauanBeratBadan = () => {
+  const now = new Date();
   const chartRef = useRef(null);
   const chartInstanceRef = useRef(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedMonth, setSelectedMonth] = useState("Januari 2024");
   const [dataPemeriksaan, setDataPemeriksaan] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const monthNames = [
@@ -26,18 +27,31 @@ const PemantauanBeratBadan = () => {
     "Desember",
   ];
 
-  useEffect(() => {
-    const ctx = chartRef.current.getContext("2d");
+  const [selectedMonth, setSelectedMonth] = useState(
+    monthNames[now.getMonth()] + " " + now.getFullYear()
+  );
 
-    if (chartInstanceRef.current) {
-      chartInstanceRef.current.destroy();
-    }
+  useEffect(() => {
     getPemeriksaanMandiri().then((res) => {
       const data = res.data;
       if (data) {
         setDataPemeriksaan(data);
       }
     });
+  }, []);
+
+  useEffect(() => {
+    setFilteredData(
+      filterDataByMonth(dataPemeriksaan, selectedMonth.split(" ")[0])
+    );
+  }, [dataPemeriksaan, selectedMonth]);
+
+  useEffect(() => {
+    const ctx = chartRef.current.getContext("2d");
+
+    if (chartInstanceRef.current) {
+      chartInstanceRef.current.destroy();
+    }
 
     chartInstanceRef.current = new Chart(ctx, {
       type: "bar",
@@ -50,7 +64,9 @@ const PemantauanBeratBadan = () => {
         datasets: [
           {
             label: selectedMonth,
-            data: filteredData.map((data) => data.berat_badan),
+            data: extractNumberFromArray(
+              filteredData.map((data) => data.berat_badan)
+            ),
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
               "rgba(54, 162, 235, 0.2)",
@@ -85,7 +101,7 @@ const PemantauanBeratBadan = () => {
         chartInstanceRef.current.destroy();
       }
     };
-  }, [selectedMonth]);
+  }, [filteredData]);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
