@@ -100,7 +100,7 @@ const DetailAsupanGizi = () => {
                       Bahan Makanan
                     </th>
                     <th className="px-4 py-2 border-b border-pink-200 md:w-[150px]">
-                      Trimester
+                      Porsi
                     </th>
                     <th className="px-4 py-2 border-b border-pink-200 md:w-[300px]">
                       Keterangan
@@ -117,7 +117,7 @@ const DetailAsupanGizi = () => {
                         {food.bahan_makanan}
                       </td>
                       <td className="px-4 py-4 border-b border-pink-200 md:px-2 md:py-2 whitespace-pre-line">
-                        {food.trimester}
+                        {food.porsi}
                       </td>
                       <td className="px-4 py-4 border-b border-pink-200 md:px-2 md:py-2">
                         {food.keterangan}
