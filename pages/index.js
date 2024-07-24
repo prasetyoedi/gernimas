@@ -18,6 +18,7 @@ const HomeUser = () => {
       setArticles(data);
     });
   }, []);
+
   return (
     <div>
       <Navbar />
@@ -157,7 +158,7 @@ const HomeUser = () => {
           ARTIKEL
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {articles.map((artikel, index) => (
+          {articles.slice(0, 6).map((artikel, index) => (
             <ArtikelCard
               key={index}
               id={artikel.id}

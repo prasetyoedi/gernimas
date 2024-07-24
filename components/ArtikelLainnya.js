@@ -10,7 +10,7 @@ const GambarArtikelLainnya = ({ imageSrc, title, author, id }) => {
       <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mt-3 w-full">
         <img
           src={imageSrc}
-          className="w-full h-[220px] md:w-[150px] md:h-[150px] rounded-lg"
+          className="w-full h-[220px] md:w-[120px] md:h-[100px] rounded-lg"
           alt="Related Article Image"
         />
         <div className="flex flex-col justify-between w-full">
