@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getArticles } from "@/pages/api/article/get_articles";
 import { useRouter } from "next/router";
 
-const GambarArtikelLainnya = ({ imageSrc, content, id }) => {
+const GambarArtikelLainnya = ({ imageSrc, title, author, id }) => {
   return (
     <Link href={`/detail_artikel?id=${id}`}>
       <div className="flex items-start gap-[30px] self-stretch mt-3">
@@ -13,16 +13,10 @@ const GambarArtikelLainnya = ({ imageSrc, content, id }) => {
           className="w-[186px] h-[112px] rounded-lg"
           alt="Related Article Image"
         />
-        <p
-          className="text-red-400"
-          style={{
-            textOverflow: "ellipsis",
-            overflow: "hidden",
-            overflowWrap: "break-word",
-          }}
-        >
-          {content}
-        </p>
+        <div>
+          <p className="text-[16px] text-red-400 font-semibold">{title}</p>
+          <p className="text-[15px]  text-red-400 mt-4">{author}</p>
+        </div>
       </div>
     </Link>
   );
@@ -50,7 +44,8 @@ const ArtikelLainnya = () => {
           key={index}
           id={article.id}
           imageSrc={article.image}
-          content={article.content}
+          title={article.judul}
+          author={article.author}
         />
       ))}
     </div>
