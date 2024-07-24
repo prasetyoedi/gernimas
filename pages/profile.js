@@ -47,6 +47,8 @@ const Profile = () => {
     "alamat",
     "no_hp",
     "pendidikan",
+    "email",
+    "pekerjaan",
   ];
 
   const leftInputs = [
