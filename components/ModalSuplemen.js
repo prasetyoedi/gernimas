@@ -17,7 +17,7 @@ const ModalSuplemen = ({ isVisible, onClose, content }) => {
         </h2>
         <div className="border-2 border-pink-300 p-2 rounded-lg mb-4 flex justify-center">
           <img
-            src={content.image}
+            src={content.gambar}
             alt={content.suplemen}
             className="w-[460px] h-[130px] object-cover rounded-xl p-2"
           />

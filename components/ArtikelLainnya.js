@@ -6,10 +6,7 @@ import { useRouter } from "next/router";
 
 const GambarArtikelLainnya = ({ imageSrc, content, id }) => {
   return (
-    <Link
-      href={`/detail_artikel?id=${id}`}
-      onClick={() => window.location.reload()}
-    >
+    <Link href={`/detail_artikel?id=${id}`}>
       <div className="flex items-start gap-[30px] self-stretch mt-3">
         <img
           src={imageSrc}
@@ -42,7 +39,7 @@ const ArtikelLainnya = () => {
         setArticles(data.filter((o) => o.id != router.query.id));
       }
     });
-  }, []);
+  }, [router.query.id]);
 
   return (
     <div className="w-full flex flex-col items-start gap-[10px] p-8 rounded-[20px] bg-[rgba(255,140,157,0.20)]">

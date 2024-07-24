@@ -7,17 +7,16 @@ import { useRouter } from "next/router";
 
 const DetailArtikel = () => {
   const [article, setArticle] = useState({});
-  const [id, setId] = useState();
+  // const [id, setId] = useState();
   const router = useRouter();
 
   useEffect(() => {
-    setId(router.query.id);
     getArticle(router.query.id).then((res) => {
       if (res.data) {
         setArticle(res.data);
       }
     });
-  }, [id]);
+  }, [router.query.id]);
   return (
     <div>
       <Navbar />
@@ -45,6 +44,10 @@ const DetailArtikel = () => {
           </div>
           <p className="text-[16px] text-red-400 text-justify">
             {article && article.content}
+          </p>
+          <p className="text-[16px] text-red-400 text-justify pt-2">
+            Referensi:{`\n`}
+            {article && article.reference}
           </p>
         </div>
         <ArtikelLainnya />
