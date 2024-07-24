@@ -58,7 +58,7 @@ const PemantauanBeratBadan = () => {
       data: {
         labels: filteredData.map((data) => {
           const date = new Date(data.created_at);
-          const result = date.getDay() + " " + monthNames[date.getMonth()];
+          const result = `${date.getDate()} ${monthNames[date.getMonth()]}`;
           return result;
         }),
         datasets: [
