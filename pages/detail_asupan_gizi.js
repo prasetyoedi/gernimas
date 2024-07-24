@@ -93,16 +93,16 @@ const DetailAsupanGizi = () => {
               <table className="w-full bg-white text-red-400">
                 <thead>
                   <tr className="text-left">
-                    <th className="px-4 py-2 border-b border-pink-200 md:w-[50px]">
+                    <th className="px-2 py-2 border-b border-pink-200 md:w-[50px]">
                       No
                     </th>
-                    <th className="px-4 py-2 border-b border-pink-200 md:w-[300px]">
+                    <th className="px-2 py-2 border-b border-pink-200 md:w-[300px]">
                       Bahan Makanan
                     </th>
-                    <th className="px-4 py-2 border-b border-pink-200 md:w-[150px]">
+                    <th className="px-2 py-2 border-b border-pink-200 md:w-[150px]">
                       Porsi
                     </th>
-                    <th className="px-4 py-2 border-b border-pink-200 md:w-[300px]">
+                    <th className="px-2 py-2 border-b border-pink-200 md:w-[300px]">
                       Keterangan
                     </th>
                   </tr>

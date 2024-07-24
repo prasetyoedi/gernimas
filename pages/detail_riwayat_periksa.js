@@ -8,6 +8,7 @@ const DetailRiwayatPeriksa = () => {
   const [trimester, setTrimester] = useState("");
   const [result, setResult] = useState({});
   const router = useRouter();
+
   useEffect(() => {
     getPemeriksaan().then((res) => {
       const data = res.data;
@@ -25,7 +26,8 @@ const DetailRiwayatPeriksa = () => {
           });
       }
     });
-  }, []);
+  }, [router.query.id]);
+
   const keys = [
     "tinggi_badan",
     "berat_badan",
@@ -39,6 +41,7 @@ const DetailRiwayatPeriksa = () => {
     "riwayat_penyakit_pribadi",
     "waktu_periksa_lanjutan",
   ];
+
   return (
     <div>
       <Navbar />
@@ -131,6 +134,14 @@ const DetailRiwayatPeriksa = () => {
                   ))}
               </tbody>
             </table>
+          </div>
+        </div>
+        <div className="flex flex-col w-full mt-8 h-auto md:h-auto p-8 flex-shrink-0 rounded-[20px] bg-[rgba(255,140,157,0.20)] gap-4">
+          <div className="w-full bg-white rounded-[20px] p-6">
+            <p className="text-red-400 font-bold text-[18px]">SARAN</p>
+            <p className="text-red-400 font-semibold text-[16px] mt-2">
+              {result.saran}
+            </p>
           </div>
         </div>
       </div>

@@ -38,8 +38,8 @@ const Agenda = () => {
       </div>
       <div className="flex flex-col p-6 md:p-20 bg-white justify-center items-center">
         <div className="flex flex-col w-full h-auto md:h-[200px] px-4 md:px-[35px] py-4 flex-shrink-0 rounded-[20px] bg-[rgba(255,140,157,0.20)] gap-4">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-[296px]">
-            <div className="flex flex-col w-full md:w-[720px] items-start gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-between gap-4 md:gap-[296px]">
+            <div className="flex flex-col w-full md:w-[720px] items-between gap-4 justify-between">
               <h1 className="text-red-400 text-2xl md:text-4xl font-bold leading-normal mt-6">
                 Hai Bunda!
               </h1>
