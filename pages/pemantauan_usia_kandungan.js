@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
-import { getKehamilan } from "./api/kehamilan/get_kehamilan";
 import { getClosestWeek } from "@/utils/get_closest_week";
 
 const PemantauanUsiaKandungan = () => {
@@ -72,16 +71,12 @@ const PemantauanUsiaKandungan = () => {
   ];
 
   const [currentData, setCurrentData] = useState();
+  const router = useRouter();
 
   useEffect(() => {
-    getKehamilan().then((res) => {
-      const data = res.data;
-      if (data) {
-        setCurrentData(
-          getClosestWeek(`${data.usia ?? 4} Minggu`, fetalDevelopmentData)
-        );
-      }
-    });
+    setCurrentData(
+      getClosestWeek(`${router.query.week ?? 4} Minggu`, fetalDevelopmentData)
+    );
   }, []);
   return (
     <div>

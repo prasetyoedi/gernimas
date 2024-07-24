@@ -91,7 +91,7 @@ const Pemantauan = () => {
       <div className="flex flex-col justify-center items-center gap-16 self-stretch bg-white p-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 mt-6">
           <PemantauanIbuHamilCard
-            href={`/pemantauan_usia_kandungan`}
+            href={`/pemantauan_usia_kandungan?week=${dataKehamilan.usia}%20Minggu`}
             title="Usia Kandungan"
             value={dataKehamilan.usia ?? "0"}
             unit="Minggu"
