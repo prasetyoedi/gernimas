@@ -91,7 +91,7 @@ const DetailRiwayatPeriksa = () => {
                   Fasilitas Kesehatan
                 </p>
                 <p className="flex w-full md:w-[807.731px] h-[50px] p-[12px_21px] text-red-400 items-center gap-2.5 flex-shrink-0 rounded-lg border border-[#F5556E]">
-                  {result.fasilitas ?? "-"}
+                  {result.faskes_1 ?? "-"}
                 </p>
               </div>
             </div>
