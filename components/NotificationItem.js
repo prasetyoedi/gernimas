@@ -12,7 +12,7 @@ const NotificationItem = ({ notification, tanggalKehamilan }) => {
           />
           <div className="flex w-full md:w-[328px] flex-col items-start gap-[18px]">
             <p className="text-red-400 text-[18px] font-bold">
-              Pemeriksaan Ruti Minggu ke-{" "}
+              Pemeriksaan Rutin Minggu ke-{" "}
               {calculateWeekGap(notification.tanggal, tanggalKehamilan)}
             </p>
             <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-[50px]">

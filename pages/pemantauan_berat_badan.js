@@ -188,7 +188,6 @@ const PemantauanBeratBadan = () => {
                 )}
               </div>
             </div>
-            <p className="text-red-500 text-[22px] tracking-wide">60 Kg</p>
             <div className="relative w-full h-[400px]">
               <canvas ref={chartRef} id="myChart"></canvas>
             </div>
