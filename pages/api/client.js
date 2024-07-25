@@ -28,8 +28,8 @@ apiClient.interceptors.response.use(
       localStorage.removeItem("user");
       if (
         !window.location.href.includes("/login") &&
-        !window.location.href.split("/")[1] &&
-        localStorage.getItem("user")
+        window.location.href.split("/")[3] &&
+        !localStorage.getItem("user")
       ) {
         window.window.location.href = "/";
       }
